@@ -1,0 +1,199 @@
+.message .heading__title span::before {
+  content: "代表メッセージ";
+}
+
+.message__area {
+  margin-top: calc(8px * 8);
+}
+
+.message__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.message__column {
+  column-gap: calc(8px * 10);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: calc(8px * 3);
+}
+
+.messageBox__text {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.messageBox__text + .messageBox__text {
+  margin-top: calc(8px * 2);
+}
+
+.messageBox__name {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: calc(8px * 2);
+  text-align: right;
+}
+
+.messageBox__name span {
+  font-size: 18px;
+}
+
+.outline {
+  margin-top: calc(8px * 16);
+}
+
+.outline .heading__title span::before {
+  content: "会社概要";
+}
+
+.outline__area {
+  margin: calc(8px * 5) auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.outelineBox {
+  align-items: center;
+  border-bottom: 1px solid #d2d2d2;
+  display: grid;
+  font-size: 15px;
+  font-weight: bold;
+  grid-template-columns: 40% 60%;
+  padding: calc(8px * 3) calc(8px * 2);
+}
+
+.outlineBox__title {
+  line-height: 1.8;
+}
+
+.outlineBox__word {
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.shoplist {
+  margin-top: calc(8px * 16);
+}
+
+.shoplist .heading__title span::before {
+  content: "店舗一覧";
+}
+
+.shoplist__area {
+  margin: calc(8px * 5) auto 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+.shoplistBox {
+  align-items: start;
+  display: grid;
+  font-size: 15px;
+  font-weight: bold;
+  grid-template-columns: 1fr 1fr;
+  padding: calc(8px * 3) calc(8px * 2);
+}
+
+.shoplistBox__title {
+  font-size: 24px;
+}
+
+.shoplistBox__title span {
+  background: linear-gradient(transparent 60%, #ffde73 60%);
+  display: inline-block;
+}
+
+.shoplist__more {
+  margin-top: calc(8px * 6);
+  text-align: center;
+}
+
+.shoplistBox__word {
+    color: var(--c-black);
+    line-height: 1.6;
+}
+
+.shoplistBox__word a {
+    color: var(--c-black);
+}
+
+@media screen and (max-width: 767px) {
+  .message {
+    margin-top: calc(8px * 8);
+  }
+
+  .message__area {
+    margin-top: calc(8px * 6);
+  }
+
+  .message__title {
+    font-size: 18px;
+  }
+
+  .message__column {
+    grid-template-columns: 100%;
+    row-gap: calc(8px * 3);
+  }
+
+  .messageBox__text {
+    font-size: 15px;
+  }
+
+  .messageBox__text + .messageBox__text {
+    margin-top: calc(8px * 2);
+  }
+
+  .messageBox__name {
+    font-size: 18px;
+    margin-top: calc(8px * 2);
+  }
+
+  .messageBox__name span {
+    font-size: 15px;
+  }
+
+  .outline {
+    margin-top: calc(8px * 10);
+  }
+
+  .outline__area {
+    margin: calc(8px * 2) auto 0;
+  }
+
+  .outelineBox {
+    font-size: 15px;
+    grid-template-columns: 100%;
+    padding: calc(8px * 3) 0 calc(8px * 2);
+    row-gap: calc(8px * 1);
+  }
+
+  .outlineBox__word {
+    font-weight: 500;
+    line-height: 1.8;
+  }
+
+  .shoplist {
+    margin-top: calc(8px * 10);
+  }
+
+  .shoplist__area {
+    margin: calc(8px * 2) auto 0;
+  }
+
+  .shoplistBox {
+    grid-template-columns: 100%;
+    padding: calc(8px * 3) 0;
+    row-gap: calc(8px * 2);
+    text-align: center;
+  }
+
+  .shoplistBox__title {
+    font-size: 18px;
+  }
+
+  .shoplist__more {
+    margin-top: calc(8px * 4);
+    text-align: center;
+  }
+}

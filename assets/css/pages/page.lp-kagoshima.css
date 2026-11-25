@@ -1,0 +1,1816 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   LP 鹿児島店グランドオープン
+   ========================================================================== */
+
+/*
+ * サイズは他ページと同じく px で指定。
+ * コンテナは .container（common.css）と同じく最大1080px、1130px以下は左右25pxの余白。
+ * 767px以下はSPデザイン（375px幅）の値に切り替える。
+ */
+.lpKagoshima {
+    --lp-main: #dd5411;
+    --lp-text: #221815;
+    --lp-fontYu: "游ゴシック体", YuGothic, "Yu Gothic", "游ゴシック", var(--familyNotoSans);
+    --lp-fontYuMedium: "游ゴシック体", YuGothic, "Yu Gothic Medium", "游ゴシック Medium", "Yu Gothic", var(--familyNotoSans);
+
+    color: var(--lp-text);
+    font-family: var(--lp-fontYu);
+    font-weight: 700;
+    overflow: hidden;
+}
+
+/* ページ内リンク（#reserve など）はスクロールして移動する ※ このCSSはLPでのみ読み込み */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+/* PC/SP で画像を切り替える <picture> はブロック要素として扱う（中の img と同じ余白・配置にするため） */
+.lpKagoshima picture {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Button
+   -------------------------------------------------------------------------- */
+.lpButton {
+    align-items: center;
+    background: var(--lp-main);
+    border-radius: 8px;
+    color: #fff;
+    display: inline-flex;
+    font-size: 18px;
+    font-weight: 700;
+    height: 60px;
+    justify-content: center;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    min-width: 280px;
+    padding: 0 40px;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.lpButton:hover {
+    opacity: 0.8;
+}
+
+/* 白ボタン（オレンジ背景上で使用） */
+.lpButton--white {
+    background: #fff;
+    color: var(--lp-main);
+}
+
+/* --------------------------------------------------------------------------
+   FV
+   -------------------------------------------------------------------------- */
+.lpFv {
+    background: linear-gradient(to bottom, #489fd3 0, #8fc5f9 382px);
+    padding-top: 383px;
+    position: relative;
+}
+
+/* 紙吹雪 */
+.lpFv__bg {
+    background:
+        url("../../images/lp-kagoshima/fv_confetti_l.webp") left top / min(440px, 42.97%) auto no-repeat,
+        url("../../images/lp-kagoshima/fv_confetti_r.webp") right top / min(560px, 54.69%) auto no-repeat;
+    height: 445px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+/* 家の写真＋バッジ（1440px基準で幅に合わせて拡縮） */
+.lpFv__visual {
+    aspect-ratio: 1440 / 606;
+    container-type: inline-size;
+    position: relative;
+    z-index: 1;
+}
+
+.lpFv__visual > * {
+    --px: calc(100cqw / 1440);
+}
+
+.lpFv__house {
+    display: block;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+}
+
+/* 2棟同時オープン バッジ */
+.lpFv__badge {
+    align-items: center;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: calc(1096 * var(--px));
+    position: absolute;
+    top: 0;
+    width: calc(291.5 * var(--px));
+}
+
+.lpFv__badgeMain {
+    align-items: stretch;
+    display: flex;
+    gap: calc(3.293 * var(--px));
+}
+
+/* 「2」はDIN AlternateのためSVG化 */
+.lpFv__badgeNum {
+    display: flex;
+    justify-content: center;
+    width: calc(34.991 * var(--px));
+}
+
+.lpFv__badgeNum img {
+    display: block;
+    height: auto;
+    width: calc(30 * var(--px));
+}
+
+.lpFv__badgeText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.lpFv__badgeSub {
+    font-size: calc(18.113 * var(--px));
+    letter-spacing: 0.05em;
+    line-height: 1;
+    padding-left: calc(2.47 * var(--px));
+}
+
+.lpFv__badgeLead {
+    color: var(--lp-main);
+    font-size: calc(30.051 * var(--px));
+    line-height: 1;
+}
+
+.lpFv__kern1 {
+    letter-spacing: -0.06em;
+}
+
+.lpFv__kern2 {
+    letter-spacing: -0.04em;
+}
+
+.lpFv__kern3 {
+    letter-spacing: -0.02em;
+}
+
+.lpFv__badgeNote {
+    font-size: calc(12 * var(--px));
+    letter-spacing: 0.05em;
+    line-height: 1.5;
+    margin-top: calc(12 * var(--px));
+    text-align: center;
+    white-space: nowrap;
+}
+
+.lpFv__roof {
+    display: block;
+    height: calc(110.325 * var(--px));
+    left: calc(943.12 * var(--px));
+    max-width: none;
+    position: absolute;
+    top: calc(211.52 * var(--px));
+    width: calc(392.777 * var(--px));
+}
+
+.lpFv__content {
+    color: #fff;
+    left: 0;
+    padding-top: 70px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 3;
+}
+
+.lpFv__head {
+    white-space: nowrap;
+}
+
+.lpFv__store {
+    font-size: 38.788px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+.lpFv__title {
+    margin-top: 18px;
+}
+
+.lpFv__title img {
+    display: block;
+    height: 93px;
+    margin-inline: auto;
+    transform: translateX(-2.45px);
+    width: 899px;
+}
+
+.lpFv__date img {
+    display: block;
+    margin: 35px auto 0;
+    height: 47px;
+    width: 226px;
+}
+
+.lpFv__copy {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.9;
+    margin-top: 24px;
+    white-space: nowrap;
+}
+
+.lpFv__content .lpButton {
+    margin-top: 24px;
+    vertical-align: top;
+}
+
+/* --------------------------------------------------------------------------
+   来場予約特典バナー
+   -------------------------------------------------------------------------- */
+.lpBanner {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 40px 25px 80px;
+}
+
+.lpBanner__link {
+    border-radius: 7.407px;
+    display: block;
+    overflow: hidden;
+    transition: opacity 0.3s;
+    max-width: 800px;
+    width: 100%;
+}
+
+.lpBanner__link:hover {
+    opacity: 0.8;
+}
+
+.lpBanner__img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   共通：セクションタイトル（includes/part-lp-section-title.php）
+   -------------------------------------------------------------------------- */
+.lpSectionTitle__text {
+    color: var(--lp-main);
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   ひなた工務店とは？
+   -------------------------------------------------------------------------- */
+.lpAbout {
+    background: #fff;
+    display: flex;
+    gap: 64px;
+    /* 左端はコンテナ（1080px）に揃え、右側のスライダーは画面右端まで */
+    padding-left: max(25px, (100% - 1080px) / 2);
+}
+
+/* flex-start でセクションタイトルを左寄せにするため flex を使用 */
+.lpAbout__body {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    /* 画面幅が狭いときはスライダーの最小幅を確保するため、本文側を縮める */
+    min-width: 0;
+    padding: 100px 0;
+    width: 598px;
+}
+
+.lpAbout__textWrap {
+    font-family: var(--lp-fontYuMedium);
+    font-weight: 500;
+    margin-top: 64px;
+    width: 100%;
+}
+
+.lpAbout__text {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+}
+
+/* 共通CSSの p { line-height: 1 } を上書きするため p に直接指定 */
+.lpAbout__text p {
+    line-height: 1.875;
+}
+
+.lpAbout__text p + p {
+    margin-top: 1.875em;
+}
+
+.lpAbout__text strong {
+    font-family: var(--lp-fontYu);
+    font-weight: 700;
+}
+
+.lpAbout__mark {
+    font-size: 0.645em;
+}
+
+.lpAbout__note {
+    display: flex;
+    font-size: 12px;
+    gap: 4px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    margin-top: 40px;
+}
+
+.lpAbout__note > span:first-child {
+    flex-shrink: 0;
+}
+
+/* スライダー：2列、左列は下→上、右列は上→下に流れる（assets/js/lp-kagoshima.js） */
+.lpAbout__slider {
+    display: flex;
+    flex: 1;
+    gap: 16px;
+    min-width: 280px;
+    position: relative;
+}
+
+.lpAbout__swiper {
+    flex: 1;
+    height: 100%;
+    margin: 0;
+    min-width: 0;
+    position: absolute;
+    top: 0;
+    width: calc((100% - 16px) / 2);
+}
+
+.lpAbout__swiper[data-direction="up"] {
+    left: 0;
+}
+
+.lpAbout__swiper[data-direction="down"] {
+    right: 0;
+}
+
+.lpAbout__swiper .swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+.lpAbout__slide {
+    height: auto;
+}
+
+.lpAbout__slide img {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   CTA：先行案内 受付中！（includes/part-lp-cta.php）
+   -------------------------------------------------------------------------- */
+.lpCta {
+    align-items: center;
+    background: var(--lp-main);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px max(25px, (100% - 1080px) / 2);
+}
+
+
+.lpCta__label {
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    gap: 24px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.lpCta__slash {
+    display: block;
+    flex-shrink: 0;
+    height: 24px;
+    overflow: visible;
+    stroke: currentColor;
+    stroke-width: 1;
+    width: 16px;
+}
+
+.lpCta__title {
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    margin-top: 16px;
+    white-space: nowrap;
+}
+
+.lpCta__textWrap {
+    margin-top: 32px;
+}
+
+.lpCta__text {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    white-space: nowrap;
+}
+
+.lpCta__note {
+    font-family: var(--lp-fontYuMedium);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    margin-top: 16px;
+    white-space: nowrap;
+}
+
+/* inline-flex のため行の高さの影響を受けないよう top 揃え */
+.lpCta .lpButton {
+    margin-top: 32px;
+    vertical-align: top;
+}
+
+.lpCta__graphic {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    width: 476px;
+}
+
+.lpCta__graphic img {
+    display: block;
+    height: 267px;
+    width: 435px;
+}
+
+/* --------------------------------------------------------------------------
+   ひなた工務店の強み（includes/part-lp-strength.php）
+   ※ 共通CSSの p, h1〜h6 { line-height: 1 } があるため行間は各要素に直接指定
+   -------------------------------------------------------------------------- */
+.lpStrength {
+    background: #efefef;
+    padding: 100px 0 160px;
+}
+
+.lpStrength__inner {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.lpStrength__catch {
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.lpStrength__list {
+    margin-top: 62px;
+}
+
+/* カード共通 */
+.lpStrCard {
+    background: #fff;
+    color: #292925;
+    padding: 64px 50px 50px 80px;
+    position: relative;
+}
+
+.lpStrCard + .lpStrCard {
+    margin-top: 63px;
+}
+
+/* 見出しより後ろの要素は40px間隔（バッジは絶対配置のため対象外） */
+.lpStrCard > .lpStrCard__head ~ * {
+    margin-top: 40px;
+}
+
+.lpStrCard img {
+    display: block;
+    height: auto;
+    max-width: none;
+    width: 100%;
+}
+
+.lpStrCard .lpStrCard__badge {
+    height: 130px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 130px;
+}
+
+.lpStrCard__lead {
+    color: var(--lp-text);
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+}
+
+.lpStrCard__titleRow {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    margin-top: 4px;
+}
+
+.lpStrCard__title {
+    font-size: 40px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.lpStrCard__tag {
+    align-items: center;
+    border: 1px solid var(--lp-main);
+    color: var(--lp-main);
+    display: flex;
+    font-size: 14px;
+    height: 30px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    padding: 0 12px;
+    white-space: nowrap;
+}
+
+.lpStrCard__sub {
+    font-family: var(--lp-fontYuMedium);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    white-space: nowrap;
+}
+
+.lpStrCard__block > * + * {
+    margin-top: 12px;
+}
+
+.lpStrCard__block--24 > * + * {
+    margin-top: 24px;
+}
+
+.lpStrCard__h4 {
+    color: var(--lp-main);
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+.lpStrCard__sup {
+    font-size: 0.645em;
+    vertical-align: super;
+}
+
+.lpStrCard__text {
+    font-family: var(--lp-fontYuMedium);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 2;
+}
+
+.lpStrCard__note {
+    color: var(--lp-main);
+    font-family: var(--lp-fontYuMedium);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 2;
+}
+
+/* オレンジ帯の小見出し */
+.lpStrCard__bar {
+    background: var(--lp-main);
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 幅が足りないときは span の区切りで折り返す */
+.lpStrCard__bar span {
+    display: inline-block;
+}
+
+/* 2カラム（左右同幅） */
+.lpStrCard__cols {
+    align-items: flex-start;
+    display: flex;
+    gap: 24px;
+}
+
+.lpStrCard__cols > * {
+    flex: 1;
+    min-width: 0;
+}
+
+.lpStrCard__cols--gap40 {
+    gap: 40px;
+}
+
+/* 右に写真（最大278px）を置くカラム */
+.lpStrCard__cols--side > .lpStrCard__sideImg,
+.lpStrCard__cols--side > .lpStrPrice {
+    flex: none;
+}
+
+/* 最大278px（カラム幅950pxのときの比率 29.3%）で、画面幅に合わせて200pxまで縮小 */
+.lpStrCard .lpStrCard__sideImg {
+    aspect-ratio: 278 / 370;
+    height: auto;
+    object-fit: cover;
+    width: clamp(200px, 29.3%, 278px);
+}
+
+.lpStrCard__col--gap24 > * + * {
+    margin-top: 24px;
+}
+
+/* 上の余白は .lpStrCard > .lpStrCard__head ~ * で指定 */
+.lpStrCard__divider {
+    background: #d9d9d9;
+    border: 0;
+    height: 1px;
+    margin: 0;
+}
+
+/* 2. 太陽光 */
+.lpStrSolar {
+    display: flex;
+    gap: 24px;
+}
+
+.lpStrSolar__body {
+    flex: none;
+    width: 600px;
+}
+
+.lpStrSolar__warranty {
+    margin-top: 24px;
+}
+
+.lpStrSolar__warrantyLead {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    margin-top: 8px;
+}
+
+.lpStrSolar__boxes {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.lpStrSolar__box {
+    align-items: center;
+    border: 1px solid #000;
+    display: flex;
+    font-size: 16px;
+    gap: 10px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    padding: 0 16px;
+    white-space: nowrap;
+}
+
+.lpStrSolar__box small {
+    font-size: 12px;
+}
+
+.lpStrSolar__box em {
+    color: var(--lp-main);
+    font-style: normal;
+}
+
+.lpStrSolar__img {
+    flex: 1;
+    height: 345px;
+    min-width: 0;
+}
+
+.lpStrCard .lpStrSolar__img img {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 5. ひのき土台：4つの理由 */
+.lpStrReason {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 860px) {
+    .lpStrReason {
+        grid-template-columns: 1fr;
+    }
+}
+
+.lpStrReason__item {
+    align-self: start;
+}
+
+.lpStrReason__item > .lpStrCard__text {
+    margin-top: 16px;
+}
+
+.lpStrReason__head {
+    align-items: flex-start;
+    display: flex;
+    gap: 8px;
+}
+
+.lpStrCard .lpStrReason__num {
+    flex: none;
+    height: 18px;
+    margin: 7px 3px 0 0;
+    width: 29px;
+}
+
+.lpStrReason__title {
+    color: var(--lp-main);
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+/* 6. 適正価格（リストとイラストを中央揃えにするため flex を使用） */
+.lpStrPrice {
+    align-items: center;
+    border: 2px solid var(--lp-main);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+}
+
+.lpStrPrice__list {
+    width: 304px;
+}
+
+.lpStrPrice__list li + li {
+    margin-top: 16px;
+}
+
+.lpStrPrice__list li {
+    align-items: center;
+    color: #231815;
+    display: flex;
+    font-size: 18px;
+    gap: 4px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    white-space: nowrap;
+}
+
+.lpStrPrice__list li::before {
+    background: url("../../images/lp-kagoshima/str_check.svg") center / contain no-repeat;
+    content: "";
+    flex: none;
+    height: 40px;
+    width: 40px;
+}
+
+.lpStrCard .lpStrPrice__illust {
+    height: 97px;
+    margin-top: 24px;
+    width: 158px;
+}
+
+/* --------------------------------------------------------------------------
+   お店で相談できること（includes/part-lp-consult.php）
+   レイアウトは CSS Grid（3テーマは subgrid で行の高さを揃える）
+   -------------------------------------------------------------------------- */
+.lpConsult {
+    background: #fff;
+}
+
+/* 写真ヘッダー＋白パネルのタイトル
+   写真は高さ固定だと狭い画面で左右が切れるため、1440:490 の比率のまま画面幅に合わせて縮小する。
+   白パネルの重なり（1440px時 157px）と上の余白（80px）も、幅に対する%で一緒に縮める */
+.lpConsult__hero {
+    overflow: hidden;
+    position: relative;
+}
+
+.lpConsult__heroImg {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.lpConsult__heroPanel {
+    background: #fff;
+    box-sizing: border-box;
+    margin: calc(-157 / 1440 * 100%) auto 0;
+    max-width: 1200px;
+    padding-top: calc(80 / 1440 * 100%);
+    position: relative;
+    width: calc(100% - 50px);
+}
+
+/* 本文 */
+.lpConsult__body {
+    margin: 0 auto;
+    padding: 24px 0 80px;
+    max-width: 1080px;
+}
+
+.lpConsult__lead {
+    font-family: var(--lp-fontYuMedium);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    text-align: center;
+}
+
+/* 3テーマ：3列 × 3行（ラベル／イラスト／テキスト）、列間に区切り線 */
+.lpConsult__themes {
+    --consult-col-gap: 49px; /* 余白24 + 線1 + 余白24 */
+
+    column-gap: var(--consult-col-gap);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+    margin-top: 64px;
+}
+
+.lpConsultTheme {
+    display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    justify-items: center;
+    padding: 0 24px;
+    position: relative;
+}
+
+.lpConsultTheme + .lpConsultTheme::before {
+    background: #dcdcdc;
+    content: "";
+    inset: 0 auto 0 calc(var(--consult-col-gap) / -2);
+    position: absolute;
+    width: 1px;
+}
+
+.lpConsultTheme__label {
+    align-content: center;
+    background: var(--lp-main);
+    border-radius: 50%;
+    color: #fff;
+    display: grid;
+    font-size: 14px;
+    height: 100px;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    text-align: center;
+    width: 100px;
+}
+
+.lpConsultTheme__label span {
+    font-size: 20px;
+}
+
+.lpConsultTheme__img {
+    display: block;
+    height: 170px;
+    margin-top: 40px;
+    max-width: 100%;
+    object-fit: unset;
+    width: 100%;
+}
+
+.lpConsultTheme__body {
+    justify-self: stretch;
+    margin-top: 40px;
+}
+
+.lpConsultTheme__title {
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+.lpConsultTheme__text {
+    font-family: var(--lp-fontYuMedium);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    margin-top: 24px;
+}
+
+/* その他何でもご相談ください ＋ キッズスペース */
+.lpConsult__other {
+    align-items: center;
+    column-gap: 24px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 202px;
+    margin-top: 64px;
+}
+
+/* チェックリストと補足を中央揃えにするため grid を使用 */
+.lpConsult__otherBody {
+    display: grid;
+    justify-items: center;
+}
+
+.lpConsult__bar {
+    align-items: center;
+    background: var(--lp-main);
+    color: #fff;
+    display: flex;
+    font-size: 20px;
+    height: 52px;
+    justify-content: center;
+    justify-self: stretch;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+}
+
+.lpConsult__checks {
+    column-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.lpConsult__checks li {
+    align-items: center;
+    column-gap: 10px;
+    display: grid;
+    font-size: 18px;
+    grid-template-columns: 20px auto;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    white-space: nowrap;
+}
+
+.lpConsult__checks li::before {
+    aspect-ratio: 1;
+    background: var(--lp-main) url("../../images/lp-kagoshima/consult_check.svg") center / 100% no-repeat;
+    border-radius: 50%;
+    content: "";
+}
+
+.lpConsult__otherNote {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    margin-top: 24px;
+}
+
+/* 円の中で上下左右中央に置くため grid を使用 */
+.lpConsult__kids {
+    align-content: center;
+    border: 1px solid var(--lp-main);
+    box-sizing: border-box;
+    height: 202px;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.lpConsult__kids img {
+    display: block;
+    height: 42px;
+    width: 41.6px;
+}
+
+.lpConsult__kidsTitle {
+    color: #ea5504;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.lpConsult__kidsText {
+    font-family: var(--lp-fontYuMedium);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.65;
+    margin-top: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   店舗情報・アクセス
+   縦方向の余白は margin-top で調整
+   -------------------------------------------------------------------------- */
+.lpShop {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.lpShop__inner {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.lpShop__img {
+    margin-top: 64px;
+}
+
+.lpShop__img img {
+    display: block;
+    object-fit: unset;
+    width: 100%;
+}
+
+.lpShop__table {
+    border-bottom: 1px solid #dcdcdc;
+    margin-top: 64px;
+}
+
+/* 項目名（240px）＋内容 の横並び */
+.lpShop__row {
+    border-top: 1px solid #dcdcdc;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+}
+
+.lpShop__row dt,
+.lpShop__row dd {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    /* Figma は線が内側に入るため、上の線1px分を差し引く */
+    padding: calc(24px - 1px) 24px 24px;
+}
+
+.lpShop__row dt {
+    align-self: center;
+    font-weight: 700;
+    text-align: center;
+}
+
+.lpShop__row dd {
+    font-family: var(--lp-fontYuMedium);
+    font-weight: 500;
+}
+
+.lpShop__row dd p {
+    line-height: 2;
+}
+
+/* Googleマップ（iframe を入れると枠いっぱいに表示） */
+.lpShop__map {
+    aspect-ratio: 770 / 380;
+    background: #ccc;
+    margin-top: 10px;
+}
+
+.lpShop__map iframe {
+    border: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   来場予約（CF7）
+   フォーム部分の見た目は page.catalog.css / form.css / calendar.css / button.css
+   （お問い合わせ・カタログ請求ページと共通）を使用。
+   LP全体の游ゴシック・太字指定を打ち消し、通常ページと同じ文字設定に戻す。
+   -------------------------------------------------------------------------- */
+.lpReserve {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.lpReserve__inner {
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.lpReserve__lead,
+.lpReserve__form {
+    color: #3d4552;
+    font-family: var(--familyNotoSans);
+    font-weight: 400;
+}
+
+.lpReserve .lpReserve__lead {
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   1130px以下：.container（common.css）と同じく左右25pxの余白
+   ========================================================================== */
+@media screen and (max-width: 1130px) {
+    .lpStrength__inner,
+    .lpConsult__body,
+    .lpShop__inner,
+    .lpReserve__inner {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .lpFv__title img {
+        height: auto;
+        max-width: calc(100% - 50px);
+    }
+
+    .lpCta__graphic {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    .lpCta__graphic img {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+/* ==========================================================================
+   SP（767px以下）
+   - .lpSp：SPのみ表示 / .lpPc：PCのみ表示（<br class="lpSp"> 等で使用）
+   ========================================================================== */
+.lpSp {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .lpSp {
+        display: revert;
+    }
+
+    .lpPc {
+        display: none;
+    }
+
+    /* ---------- Button ---------- */
+    .lpButton {
+        font-size: 16px;
+        height: 50px;
+        min-width: 250px;
+        padding: 0 24px;
+    }
+
+    /* ---------- 共通：セクションタイトル ---------- */
+    .lpSectionTitle__text {
+        font-size: 32px;
+    }
+
+    /* ---------- FV ---------- */
+    .lpFv {
+        background: linear-gradient(to bottom, #489fd3 0, #8fc5f9 214px);
+        padding-top: 382px;
+    }
+
+    .lpFv__bg {
+        background-image: url("../../images/lp-kagoshima/fv_bg_sp.webp");
+        background-size: 100% auto;
+        height: 128px;
+    }
+
+    .lpFv__visual {
+        aspect-ratio: 375 / 172;
+    }
+
+    .lpFv__visual > * {
+        --px: calc(100cqw / 375);
+    }
+
+    /* 上が白・下に向かって透明になる円（下側は家の写真に溶け込む） */
+    .lpFv__badge {
+        background: linear-gradient(to bottom, #fff 0%, rgba(255, 255, 255, 0.7) 48.369%, rgba(255, 255, 255, 0) 56.905%);
+        box-sizing: border-box;
+        justify-content: flex-start;
+        left: calc(125.5 * var(--px));
+        padding-top: calc(29 * var(--px));
+        top: calc(-47 * var(--px));
+        width: calc(209 * var(--px));
+    }
+
+    .lpFv__badgeMain {
+        align-items: center;
+        gap: calc(2 * var(--px));
+    }
+
+    .lpFv__badgeNum {
+        width: auto;
+    }
+
+    .lpFv__badgeNum img {
+        width: calc(22.13 * var(--px));
+    }
+
+    .lpFv__badgeText {
+        gap: calc(6 * var(--px));
+        justify-content: flex-start;
+    }
+
+    .lpFv__badgeSub {
+        font-size: calc(10.113 * var(--px));
+        letter-spacing: 0;
+    }
+
+    .lpFv__badgeLead {
+        font-size: calc(17.051 * var(--px));
+    }
+
+    .lpFv__badgeNote {
+        font-size: calc(10 * var(--px));
+        margin-top: calc(7 * var(--px));
+    }
+
+    /* SPは写真と同サイズの切り抜き画像を重ねる */
+    .lpFv__roof {
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    .lpFv__content {
+        padding-top: 40px;
+    }
+
+    .lpFv__store {
+        font-size: 20px;
+    }
+
+    .lpFv__title {
+        margin-top: 15.18px;
+    }
+
+    .lpFv__title img {
+        height: 38px;
+        transform: none;
+        width: 343px;
+        max-width: 100%;
+    }
+
+    .lpFv__date img {
+        height: 27px;
+        margin-top: 22.82px;
+        width: 127px;
+    }
+
+    .lpFv__copy {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .lpFv__content .lpButton {
+        margin-top: 16px;
+    }
+
+    /* ---------- 来場予約特典バナー ---------- */
+    .lpBanner {
+        padding: 20px 20px 40px;
+    }
+
+    .lpBanner__link {
+        width: 100%;
+    }
+
+    /* ---------- ひなた工務店とは？ ---------- */
+    .lpAbout {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .lpAbout__body {
+        align-items: center;
+        padding: 24px 0 50px;
+        width: auto;
+    }
+
+    .lpAbout__textWrap {
+        margin-top: 32px;
+    }
+
+    .lpAbout__text {
+        font-size: 14px;
+    }
+
+    .lpAbout__text p {
+        line-height: 1.7;
+    }
+
+    .lpAbout__text p + p {
+        margin-top: 1.75em;
+    }
+
+    /* PCの縦スライダーは非表示（SPはCTAの下に横スライダーを表示） */
+    .lpAbout__slider {
+        display: none;
+    }
+
+    /* SP：2段の横スライダー */
+    .lpAboutSp {
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .lpAboutSp__swiper {
+        height: 120px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .lpAboutSp__swiper .swiper-wrapper {
+        transition-timing-function: linear;
+    }
+
+    .lpAboutSp__slide {
+        height: 100%;
+        width: auto;
+    }
+
+    .lpAboutSp__slide img {
+        display: block;
+        height: 100%;
+        width: auto;
+    }
+
+    /* ---------- CTA ---------- */
+    .lpCta {
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .lpCta__body {
+        width: 100%;
+    }
+
+    .lpCta__label {
+        font-size: 14px;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .lpCta__title {
+        font-size: 20px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .lpCta__textWrap {
+        margin-top: 24px;
+    }
+
+    .lpCta__text {
+        font-size: 14px;
+        white-space: normal;
+    }
+
+    .lpCta__note {
+        margin-top: 8px;
+        white-space: normal;
+    }
+
+    .lpCta .lpButton {
+        box-sizing: border-box;
+        display: flex;
+        margin-top: 24px;
+        width: 100%;
+    }
+
+    .lpCta__graphic {
+        margin-top: 32px;
+        width: 210px;
+    }
+
+    .lpCta__graphic img {
+        height: 117.794px;
+        width: 191.912px;
+    }
+
+    /* ---------- ひなた工務店の強み：カード共通 ---------- */
+    .lpStrCard {
+        padding: 32px 20px 25px;
+    }
+
+    .lpStrCard + .lpStrCard {
+        margin-top: 32px;
+    }
+
+    .lpStrCard > .lpStrCard__head ~ * {
+        margin-top: 24px;
+    }
+
+    .lpStrCard .lpStrCard__badge {
+        height: 80px;
+        width: 80px;
+    }
+
+    .lpStrCard__head {
+        text-align: center;
+    }
+
+    .lpStrCard__lead {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    /* 見出し＋ラベルを1行目、補足を2行目に中央揃え */
+    .lpStrCard__titleRow {
+        column-gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 4px;
+    }
+
+    .lpStrCard__title {
+        font-size: 24px;
+    }
+
+    .lpStrCard__tag {
+        font-size: 12px;
+        height: 24px;
+    }
+
+    .lpStrCard__sub {
+        flex-basis: 100%;
+        font-size: 12px;
+    }
+
+    .lpStrCard__h4 {
+        font-size: 18px;
+    }
+
+    .lpStrCard__sup {
+        font-size: 15.48px;
+    }
+
+    .lpStrCard__bar {
+        font-size: 16px;
+        padding: 6px;
+    }
+
+    /* 2カラム → 縦積み */
+    .lpStrCard__cols,
+    .lpStrCard__cols--gap40  {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .lpStrCard .lpStrCard__sideImg {
+        height: auto;
+        width: 285px;
+    }
+
+    .lpStrCard--5 .lpStrCard__sideImg {
+        margin-top: 1.15rem;
+    }
+
+    /* 2. 太陽光：オレンジ帯を2つに分けて左寄せ */
+    .lpStrCard__bar--split {
+        background: none;
+        padding: 0;
+        text-align: left;
+    }
+
+    .lpStrCard__bar--split span {
+        background: var(--lp-main);
+        display: block;
+        padding: 6px;
+        width: fit-content;
+    }
+
+    .lpStrCard__bar--split span + span {
+        margin-top: 8px;
+    }
+
+    .lpStrSolar {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .lpStrSolar__body {
+        width: auto;
+    }
+
+    .lpStrSolar__warrantyLead {
+        font-size: 14px;
+    }
+
+    .lpStrSolar__boxes {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .lpStrSolar__box {
+        column-gap: 12px;
+        flex-wrap: wrap;
+        font-size: 14px;
+        gap: 1px 0.65rem;
+        justify-content: center;
+        padding: 4px 16px;
+    }
+
+    .lpStrSolar__box > span {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .lpStrSolar__box small {
+        font-size: 10px;
+    }
+
+    .lpStrSolar__img {
+        flex: none;
+        height: 295.27px;
+        width: 285px;
+    }
+}
+
+/* SP（767px以下）：強み（セクション・カード3/5/6）〜来場予約 */
+@media screen and (max-width: 767px) {
+    /* ---------- ひなた工務店の強み ---------- */
+    .lpStrength {
+        padding: 50px 20px 80px;
+    }
+
+    .lpStrength__inner {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+
+    .lpStrength__catch {
+        font-size: 20px;
+        letter-spacing: 0.03em;
+        margin-top: 32px;
+    }
+
+    .lpStrength__list {
+        margin-top: 32px;
+    }
+
+    /* 3. 断熱：区切り線の後ろのブロックは40px間隔 */
+    .lpStrCard__divider + .lpStrCard__col > * + * {
+        margin-top: 40px;
+    }
+
+    .lpStrCard__divider + .lpStrCard__col .lpStrCard__cols {
+        gap: 40px;
+    }
+
+    /* 5. ひのき土台：4つの理由を1列に */
+    .lpStrReason {
+        gap: 24px;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .lpStrReason__head {
+        gap: 4px;
+    }
+
+    /* 番号は20px相当（PCの24px用SVGを縮小）、番号の枠は幅32px */
+    .lpStrCard .lpStrReason__num {
+        height: 15px;
+        margin: 5.5px 7.83px 0 0;
+        width: 24.17px;
+    }
+
+    .lpStrReason__title {
+        font-size: 16px;
+    }
+
+    /* 6. 適正価格 */
+    .lpStrPrice {
+        border-radius: 30px;
+        padding: 26px 16px;
+    }
+
+    .lpStrPrice__list {
+        width: 259px;
+    }
+
+    .lpStrPrice__list li {
+        font-size: 16px;
+        white-space: normal;
+    }
+
+    .lpStrPrice__list li::before {
+        height: 24px;
+        width: 24px;
+    }
+
+    /* ---------- お店で相談できること ---------- */
+    /* 375px幅で高さ204.82px（画像の上側を表示）の切り抜きのまま、画面幅に合わせて拡縮 */
+    .lpConsult__heroImg {
+        aspect-ratio: 375 / 204.82;
+        object-position: top;
+    }
+
+    /* SP は写真の下にタイトル（重ならない） */
+    .lpConsult__heroPanel {
+        margin-top: 0;
+        padding-top: 24px;
+        width: 100%;
+    }
+
+    .lpConsult__body {
+        padding: 24px 20px 40px;
+        width: auto;
+    }
+
+    .lpConsult__lead {
+        font-size: 14px;
+    }
+
+    /* 3テーマ：縦積み、間に横線 */
+    .lpConsult__themes {
+        --consult-row-gap: 49px; /* 余白24 + 線1 + 余白24 */
+
+        display: block;
+        margin-top: 32px;
+    }
+
+    .lpConsultTheme {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    .lpConsultTheme + .lpConsultTheme {
+        margin-top: var(--consult-row-gap);
+    }
+
+    .lpConsultTheme + .lpConsultTheme::before {
+        height: 1px;
+        inset: calc(var(--consult-row-gap) / -2) 0 auto 0;
+        width: auto;
+    }
+
+    .lpConsultTheme__label {
+        font-size: 12px;
+        height: 80px;
+        width: 80px;
+    }
+
+    .lpConsultTheme__label span {
+        font-size: 18px;
+    }
+
+    .lpConsultTheme__img {
+        height: 130px;
+        margin-top: 24px;
+        width: auto;
+    }
+
+    .lpConsultTheme__body {
+        align-self: stretch;
+        margin-top: 24px;
+    }
+
+    .lpConsultTheme__title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .lpConsultTheme__text {
+        margin-top: 16px;
+    }
+
+    /* その他何でもご相談ください ＋ キッズスペース：縦積み */
+    .lpConsult__other {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        margin-top: 32px;
+        row-gap: 24px;
+    }
+
+    .lpConsult__otherBody {
+        justify-self: stretch;
+    }
+
+    .lpConsult__bar {
+        font-size: 16px;
+        height: auto;
+        padding: 6px;
+    }
+
+    .lpConsult__checks {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .lpConsult__checks li {
+        font-size: 16px;
+    }
+
+    .lpConsult__otherNote {
+        font-size: 14px;
+    }
+
+    .lpConsult__kids {
+        padding-bottom: 10px;
+        width: 202px;
+    }
+
+    .lpConsult__kidsTitle {
+        font-size: 16px;
+    }
+
+    .lpConsult__kidsText {
+        font-size: 12px;
+    }
+
+    /* ---------- 店舗情報・アクセス ---------- */
+    .lpShop {
+        padding: 50px 20px;
+    }
+
+    .lpShop__inner {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+
+    .lpShop__img {
+        margin-top: 32px;
+    }
+
+    .lpShop__img img {
+        height: 133.38px;
+    }
+
+    .lpShop__table {
+        margin-top: 32px;
+    }
+
+    /* 項目名の下に内容を表示 */
+    .lpShop__row {
+        display: block;
+    }
+
+    .lpShop__row dt {
+        padding: calc(16px - 1px) 16px 0;
+        text-align: left;
+    }
+
+    .lpShop__row dd {
+        padding: 8px 16px 16px;
+    }
+
+    /* ---------- 来場予約 ---------- */
+    .lpReserve {
+        padding: 50px 20px;
+    }
+
+    .lpReserve__inner {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+    }
+
+    .lpReserve .lpReserve__lead {
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,674 @@
+/* -----------------------------------------------------
+
+  staff
+
+------------------------------------------------------ */
+.staff__area {
+  display: grid;
+  gap: 40px 18px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1080px) {
+  .staff__area {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+  }
+}
+
+.itemStaff__thumbanil {
+  position: relative;
+}
+
+/* .itemStaff__thumbanil::before,
+.itemStaff__thumbanil::after {
+    position: absolute;
+}
+
+.itemStaff__thumbanil::before {
+    content: url("../../images/staff/staff_image-decoration_left.svg");
+    left: 0;
+    top: 7px;
+}
+
+.itemStaff__thumbanil::after {
+    bottom: -1px;
+    content: url(../../images/staff/staff_image-decoration_right.svg);
+    right: -2px;
+} */
+
+.itemStaff__thumbanil img {
+  aspect-ratio: 257 / 434;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.itemStaff__name {
+  color: var(--colorBlack);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: calc(8px * 2);
+  text-align: center;
+}
+
+.itemStaff__en {
+  color: var(--colorMain);
+  font-family: var(--familySacramento);
+  font-size: 16px;
+  margin-top: calc(8px * 1);
+  text-align: center;
+}
+
+.itemStaff__occupation {
+  border-bottom: 1px solid var(--colorBorder);
+  border-top: 1px solid var(--colorBorder);
+  color: var(--colorBlack);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: calc(8px * 2);
+  padding: calc(8px * 2) 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .staff__area {
+    display: grid;
+    gap: 40px 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .itemStaff__name {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    margin-top: calc(8px * 2);
+    text-align: center;
+  }
+
+  .itemStaff__en {
+    color: var(--colorMain);
+    font-family: var(--familySacramento);
+    font-size: 16px;
+    margin-top: calc(8px * 1);
+    text-align: center;
+  }
+
+  .itemStaff__occupation {
+    border-bottom: 1px solid var(--colorBorder);
+    border-top: 1px solid var(--colorBorder);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: calc(8px * 2);
+    padding: calc(8px * 2) 0;
+    text-align: center;
+  }
+}
+
+/* -----------------------------------------------------
+
+  EVENT 
+
+------------------------------------------------------ */
+.event__list {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.itemEvent {
+  padding: 20px;
+}
+
+.itemEventThumbanil {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.itemEventThumbanil img {
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.itemEventThumbanil__status {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  left: 0;
+  line-height: 1;
+  margin-right: 30px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100px;
+  transform: translateY(-100%);
+}
+
+.itemEventThumbanil__status::before {
+  border-bottom: 20px solid transparent;
+  border-top: 0 solid transparent;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -14px;
+  top: 0;
+  width: 0;
+}
+
+.itemEventThumbanil__status::after {
+  border-bottom: 0 solid transparent;
+  border-top: 20px solid transparent;
+  bottom: 0;
+  content: "";
+  height: 0;
+  position: absolute;
+  right: -14px;
+  width: 0;
+}
+
+.itemEventThumbanil__status.is-before {
+  background-color: #60a9ff;
+}
+
+.itemEventThumbanil__status.is-before::before,
+.itemEventThumbanil__status.is-before::after {
+  border-left: 15px solid #60a9ff;
+}
+
+.itemEventThumbanil__status.is-session {
+  background-color: var(--colorMain);
+}
+
+.itemEventThumbanil__status.is-session::before,
+.itemEventThumbanil__status.is-session::after {
+  border-left: 15px solid var(--colorMain);
+}
+
+.itemEventThumbanil__status.is-ended {
+  background-color: #929292;
+}
+
+.itemEventThumbanil__status.is-ended::before,
+.itemEventThumbanil__status.is-ended::after {
+  border-left: 15px solid #929292;
+}
+
+.itemEvent__title {
+  color: var(--colorBlack);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.itemEvent__address {
+  border-top: 1px solid #d2d2d2;
+  color: var(--colorBlack);
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 18px;
+  padding: 16px 0;
+}
+
+.itemEvent__priod {
+  border-top: 1px solid #d2d2d2;
+  color: var(--colorBlack);
+  font-size: 14px;
+  font-weight: 400;
+  padding: 16px 0;
+  line-height: 1.5;
+}
+
+.itemEvent__priod .extraDates {
+  display: block;
+  margin-top: 4px;
+}
+
+.itemEvent__link {
+  color: var(--colorSub);
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: right;
+}
+
+.itemEvent__link::after {
+  border: 0;
+  border-right: 2px solid var(--colorSub);
+  border-top: 2px solid var(--colorSub);
+  bottom: 0;
+  content: "";
+  height: 6px;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(45deg);
+  width: 6px;
+}
+
+.formSection {
+  margin-top: clamp(60px, 11.11vw, 120px);
+}
+
+@media screen and (max-width: 767px) {
+  .event__list {
+    grid-template-columns: 100%;
+  }
+
+  .itemEvent {
+    padding: 0;
+  }
+}
+
+/* -----------------------------------------------------
+
+  モデルハウス
+
+------------------------------------------------------ */
+.stepHeading__title {
+  text-align: center;
+}
+
+.stepHeading__title span {
+  border-bottom: 3px dashed var(--colorMain);
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.stepHeading__text {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-top: 40px;
+}
+
+.stepMain {
+  column-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 40px;
+}
+
+.stepMainBox__img {
+  position: relative;
+}
+
+.stepMainBox__img--number {
+  align-items: center;
+  background: #fff;
+  border-radius: 50%;
+  bottom: -75px;
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 150px;
+}
+
+.stepMainBox__img--number img {
+  height: 64px;
+  width: auto;
+}
+
+.stepMainBoxDeteils {
+  margin-top: 96px;
+}
+
+.stepMainBoxDeteils__title {
+  text-align: center;
+}
+
+.stepMainBoxDeteils__title span {
+  background: linear-gradient(transparent 70%, #ffde73 70%);
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.stepMainBoxDeteils__text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-top: 16px;
+  padding: 0 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .stepHeading__title span {
+    font-size: 24px;
+  }
+
+  .stepHeading__text {
+    font-size: 15px;
+    margin-top: 24px;
+  }
+
+  .stepMain {
+    grid-template-columns: 100%;
+    margin-top: 24px;
+    row-gap: 40px;
+  }
+
+  .stepMainBox__img--number {
+    bottom: -50px;
+    height: 100px;
+    width: 100px;
+  }
+
+  .stepMainBox__img--number img {
+    height: 50px;
+  }
+
+  .stepMainBoxDeteils {
+    margin-top: 64px;
+  }
+
+  .stepMainBoxDeteils__title span {
+    font-size: 18px;
+  }
+
+  .stepMainBoxDeteils__text {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+/* -----------------------------------------------------
+
+  施工事例
+
+------------------------------------------------------ */
+.works__list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.works__item {
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.works__thumbnail img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.works__title {
+  background: #fff;
+  bottom: 10px;
+  color: var(--colorBlack);
+  display: grid;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  line-height: 1.8;
+  margin-inline: 10px;
+  padding: 4px 10px;
+  position: absolute;
+  row-gap: 10px;
+}
+
+.works__plan {
+  border-radius: 100px;
+  color: #3d4552;
+  display: grid;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  left: 10px;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  min-width: 144px;
+  place-items: center;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .works__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+}
+
+/* -----------------------------------------------------
+
+  自社土地建売
+
+------------------------------------------------------ */
+.estate {
+  padding-block: 100px;
+}
+
+.estate__list {
+  display: grid;
+  gap: 80px 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.estate__item {
+  display: grid;
+  gap: 0;
+  grid-row: span 9;
+  grid-template-rows: subgrid;
+}
+
+.estate__thumbnail {
+  border: 1px solid #d2d2d2;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.estate__thumbnail img {
+  border-radius: 10px;
+}
+
+.estate__thumbnail--new::after {
+  background: url("../../images/icon/icon_new.svg") center center / cover no-repeat;
+  content: "";
+  display: inline-block;
+  height: 66px;
+  left: 10px;
+  position: absolute;
+  top: -15%;
+  width: 66px;
+}
+
+.estate__info {
+  color: var(--colorBlack);
+  display: grid;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 0;
+  grid-row: span 7;
+  grid-template-rows: subgrid;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+.estate__infoRow {
+  border-top: 1px solid #d2d2d2;
+  display: grid;
+  grid-template-columns: 38.4% auto;
+  line-height: 1.8;
+  padding-block: 8px;
+}
+
+.estate__infoRow--price span:nth-child(1) {
+  align-self: center;
+}
+
+.estate__title {
+  color: var(--colorBlack);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  padding-bottom: 18px;
+}
+
+.estate__price {
+  color: var(--colorSub);
+  font-size: 28px;
+  font-weight: 700;
+  justify-self: end;
+}
+
+.estate__priceUnit {
+  font-size: 14px;
+}
+
+.estate__link {
+  align-items: center;
+  color: var(--colorSub);
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  gap: 16px;
+  justify-content: end;
+  margin-top: 18px;
+  padding-bottom: 1px;
+}
+
+.estate__link::after {
+  content: url("../../images/icon/icon_chevron-right_orange.svg");
+  padding-top: 2px;
+}
+
+@media screen and (max-width: 1024px) {
+  .estate__thumbnail--new::after {
+    height: 5vw;
+    top: -2.6vw;
+    width: 5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .estate {
+    padding-block: 32px;
+  }
+
+  .estate__list {
+    gap: 56px 16px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .estate__thumbnail--new::after {
+    height: 8vw;
+    top: -4.1vw;
+    width: 8vw;
+  }
+
+  .estate__title {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .estate__info {
+    font-size: 10px;
+  }
+
+  .estate__infoRow {
+    grid-template-columns: 33% auto;
+    line-height: 1.6;
+    padding-block: 6px;
+  }
+
+  .estate__price {
+    font-size: 22px;
+  }
+
+  .estate__priceUnit {
+    font-size: 12px;
+  }
+
+  .estate__link {
+    font-size: 12px;
+    gap: 12px;
+  }
+}
+
+/* -----------------------------------------------------
+
+  ページナビゲーション
+
+------------------------------------------------------ */
+.pageNav {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pageNav .nav-links {
+  align-items: center;
+  column-gap: 24px;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pageNav .screen-reader-text {
+  display: none;
+}
+
+.pageNav .page-numbers {
+  color: var(--colorBlack);
+}
+
+.pageNav .page-numbers.current {
+  color: var(--colorSub);
+}
+
+.pageNav__prev,
+.pageNav__next {
+  background-color: #ff5c00;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+.pageNav__prev::before {
+  border-color: white;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  content: "";
+  height: 10px;
+  left: 60%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-135deg);
+  width: 10px;
+}
+
+.pageNav__next::before {
+  border-color: white;
+  border-style: solid;
+  border-width: 2px 2px 0 0;
+  content: "";
+  height: 6px;
+  position: absolute;
+  right: 26%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 6px;
+}

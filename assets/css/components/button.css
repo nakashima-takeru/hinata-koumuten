@@ -1,0 +1,160 @@
+.button a {
+    align-items: center;
+    background: #ea5503;
+    border-radius: 100vmax;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    height: 100px;
+    justify-content: center;
+    position: relative;
+    width: 400px;
+}
+
+.button a::before {
+    border: 2px solid #fff;
+    border-radius: 100vmax;
+    content: "";
+    height: 85%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+	transform: translate(-50%, -50%);
+    width: 96%;
+}
+
+.button a span {
+    display: inline-block;
+    padding-left: calc(8px * 4);
+    position: relative;
+}
+
+.button a span::after {
+    background: url("../../images/icon/icon_mail.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 16px;
+    left: 0;
+    margin-top: -8px;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+}
+
+.buttonMore__orange {
+    border: 3px solid var(--colorSub);
+    border-radius: 100vmax;
+    color: #3d4552;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    max-width: 200px;
+    padding: calc(8px * 2) 0;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.buttonMore__orange::before {
+    border: 0;
+    border-left: 2px solid var(--colorSub);
+    border-top: 2px solid var(--colorSub);
+    bottom: 0;
+    content: "";
+    height: 6px;
+    left: calc(8px * 2);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    transform: rotate(-45deg);
+    width: 6px;
+}
+
+@media screen and (max-width: 767px) {
+    .button a {
+        font-size: 16px;
+        height: 70px;
+        width: 300px;
+    }
+}
+
+.buttonRight {
+    align-items: center;
+    border: 3px solid var(--colorSub);
+    border-radius: 100px;
+    color: var(--colorSub);
+    color: var(--colorBlack);
+    display: flex;
+    font-size: 15px;
+    font-weight: 700;
+    height: 60px;
+    justify-content: space-between;
+    letter-spacing: 0.1em;
+    max-width: 280px;
+    padding-inline: 28px 24px;
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+}
+
+.buttonRight:hover {
+    background: var(--colorSub);
+    color: #fff;
+}
+
+.buttonRight::after {
+    content: url("../../images/icon/icon_chevron-right_orange.svg");
+    display: inline-block;
+}
+
+.buttonRight:hover::after {
+    content: url("../../images/icon/icon_chevron-right_white.svg");
+}
+
+.buttonRight--lg {
+    max-width: 100%;
+    width: fit-content;
+}
+
+/* ブロックエディタ用 */
+.block-button a {
+  position: relative;
+  align-items: center;
+  background: #ea5503;
+  border-radius: 100vmax;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 78px;
+  justify-content: center;
+  position: relative;
+  width: 400px;
+}
+.block-button .icon-mail a::before {
+    content: "";
+    background: url("../../images/icon/icon_mail.png") no-repeat center center / contain;
+    height: 16px;
+    width: 20px;
+    display: inline-block;
+    margin-top: 3px;
+}
+.block-button .line-white a::after {
+    border: 2px solid #fff;
+    border-radius: 100vmax;
+    content: "";
+    height: 85%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 96%;
+}

@@ -1,0 +1,336 @@
+.fixButton__form {
+    display: none;
+}
+
+/* Banner */
+.banner {
+    margin-top: 20px;
+}
+
+/* Top */
+.top {
+    padding-block: 80px 40px;
+}
+
+.top__catch {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #ffde73;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.55em;
+    text-underline-offset: -0.2em;
+}
+
+.top__catch br {
+    display: none;
+}
+
+.top__catch--bottom br {
+    display: block;
+}
+
+.top__lead {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.top__image {
+    padding-block: 80px;
+}
+
+@media screen and (max-width: 767px) {
+    .top {
+        padding-block: 40px 20px;
+    }
+
+    .top .container {
+        padding-inline: 20px;
+    }
+
+    .top__catch {
+        font-size: 20px;
+    }
+
+    .top__catch br {
+        display: inline-block;
+    }
+
+    .top__lead {
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .top__image {
+        padding-block: 40px;
+    }
+}
+
+/* Merit */
+.merit {
+    padding-block: 40px;
+}
+
+.merit .heading__title span::before {
+    content: "選ばれる理由";
+}
+
+.meritList {
+    align-items: start;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 40px;
+}
+
+.meritList__item {
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.meritList__image img {
+    width: 100%;
+}
+
+.meritList__title {
+    align-self: start;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.meritList__text {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    line-height: 1.8;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+    .merit {
+        padding-block: 20px;
+    }
+
+    .meritList {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Flow */
+.flow {
+    padding-block: 40px;
+}
+
+.flow .heading__title span::before {
+    content: "来場予約の流れ";
+}
+
+.flowList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    row-gap: 40px;
+}
+
+.flowList__item {
+    align-items: center;
+    display: flex;
+}
+
+.flowList__item:not(:last-child)::after {
+    content: url("../../images/form-visitor/icon_arrow.svg");
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.flowList__item:nth-of-type(3)::after {
+    content: "";
+}
+
+@media screen and (max-width: 1100px) {
+    .flowList__item:nth-of-type(3)::after {
+        content: url("../../images/form-visitor/icon_arrow.svg");
+    }
+}
+
+@media screen and (max-width: 787px) {
+    .flow {
+        padding-block: 20px;
+    }
+
+    .flowList {
+        flex-direction: column;
+    }
+
+    .flowList__item {
+        flex-direction: column;
+    }
+
+    .flowList__item:not(:last-child)::after {
+        margin-top: 20px;
+        transform: rotate(90deg);
+    }
+}
+
+/* Event */
+.event {
+    padding-block: 40px;
+}
+
+.event__list {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.itemEvent {
+    padding: 20px;
+}
+
+.itemEventThumbanil {
+    position: relative;
+}
+
+.itemEventThumbanil img {
+    border-radius: 0 10px 10px 0;
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.itemEventThumbanil__status {
+    align-items: center;
+    color: #fff;
+    display: flex;
+    font-size: 15px;
+    font-weight: bold;
+    height: 40px;
+    justify-content: center;
+    left: 0;
+    line-height: 1;
+    margin-right: 30px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100px;
+}
+
+.itemEventThumbanil__status::before {
+    border-bottom: 20px solid transparent;
+    border-top: 0 solid transparent;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -14px;
+    top: 0;
+    width: 0;
+}
+
+.itemEventThumbanil__status::after {
+    border-bottom: 0 solid transparent;
+    border-top: 20px solid transparent;
+    bottom: 0;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: -14px;
+    width: 0;
+}
+
+.itemEventThumbanil__status.is-before {
+    background-color: #60a9ff;
+}
+
+.itemEventThumbanil__status.is-before::before,
+.itemEventThumbanil__status.is-before::after {
+    border-left: 15px solid #60a9ff;
+}
+
+.itemEventThumbanil__status.is-session {
+    background-color: var(--colorMain);
+}
+
+.itemEventThumbanil__status.is-session::before,
+.itemEventThumbanil__status.is-session::after {
+    border-left: 15px solid var(--colorMain);
+}
+
+.itemEventThumbanil__status.is-ended {
+    background-color: #929292;
+}
+
+.itemEventThumbanil__status.is-ended::before,
+.itemEventThumbanil__status.is-ended::after {
+    border-left: 15px solid #929292;
+}
+
+.itemEvent__title {
+    color: var(--colorBlack);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.itemEvent__address {
+    border-top: 1px solid #d2d2d2;
+    color: var(--colorBlack);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 18px;
+    padding: 16px 0;
+}
+
+.itemEvent__priod {
+    border-top: 1px solid #d2d2d2;
+    color: var(--colorBlack);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 16px 0;
+}
+
+.itemEvent__link {
+    color: var(--colorMain);
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 24px;
+    padding-right: 24px;
+    position: relative;
+    text-align: right;
+}
+
+.itemEvent__link::after {
+    border: 0;
+    border-right: 2px solid var(--colorMain);
+    border-top: 2px solid var(--colorMain);
+    bottom: 0;
+    content: "";
+    height: 6px;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: rotate(45deg);
+    width: 6px;
+}
+
+@media screen and (max-width: 767px) {
+    .event__list {
+        grid-template-columns: 100%;
+    }
+
+    .itemEvent {
+        padding: 0;
+    }
+}

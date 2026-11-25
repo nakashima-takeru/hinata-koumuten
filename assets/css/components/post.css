@@ -1,0 +1,143 @@
+.postCard a {
+  align-items: center;
+  border-bottom: 1px solid var(--c-lightGray);
+  column-gap: calc(8px * 3);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  padding: calc(8px * 4) 0;
+  position: relative;
+}
+
+.postCard a:hover {
+  opacity: 0.7;
+}
+
+.postCard a:hover::before {
+  right: 0;
+}
+
+.postCard__date {
+  color: var(--c-gray);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.postCard__title {
+  color: var(--c-black);
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+
+.eventCard {
+  padding: 20px;
+}
+
+.eventCard__thumbnail {
+  position: relative;
+}
+
+.eventCard__flag {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.statusLabel {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  padding-right: calc(8px * 0);
+  position: relative;
+  width: 110px;
+}
+
+.statusLabel.for-before {
+  background: #60a9ff;
+}
+
+.statusLabel.for-session {
+  background: #f5a455;
+}
+
+.statusLabel.for-ended {
+  background: #929292;
+}
+
+.statusLabel__word {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.statusLabel::before {
+  background: #f5a455;
+  bottom: 0;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  content: "";
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  right: -15px;
+  top: 0;
+  width: 16px;
+}
+
+.statusLabel::after {
+  background: #f5a455;
+  bottom: 0;
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  content: "";
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  right: -15px;
+  width: 16px;
+}
+
+.eventCard__thumbnail img {
+  border-radius: 0 8px 8px 8px;
+}
+
+.eventCard__title {
+  color: #3d4552;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: calc(8px * 2);
+}
+
+.eventCardBox__address,
+.eventCardBox__priod {
+  border-top: 1px solid #929292;
+  color: #3d4552;
+  font-size: 14px;
+  font-weight: 400;
+  padding: calc(8px * 1);
+}
+
+@media screen and (max-width: 767px) {
+  .postCard a {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: calc(8px * 2) 0;
+    row-gap: calc(8px * 0.5);
+  }
+
+  /* .postCard a::before {
+    border-right: 2px solid var(--c-orange);
+    border-top: 2px solid var(--c-orange);
+    height: 6px;
+    right: calc(8px * 2);
+    width: 6px;
+  } */
+
+  .postCard__date {
+    font-size: 14px;
+  }
+
+  .postCard__title {
+    font-size: 16px;
+  }
+}

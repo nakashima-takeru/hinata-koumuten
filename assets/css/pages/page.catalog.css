@@ -1,0 +1,341 @@
+.catalog {
+  padding-bottom: 96px;
+}
+
+.catalogHead {
+  margin-top: 40px;
+}
+
+.catalogHead__title {
+  text-align: center;
+}
+
+.catalogHead__title + .catalogHead__title {
+  margin-top: 16px;
+}
+
+.catalogHead__title span {
+  background: linear-gradient(transparent 70%, #ffde73 70%);
+  display: inline-block;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0 6px 6px;
+}
+
+.catalogHead__word {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 2;
+  margin-top: 54px;
+  text-align: center;
+}
+
+.catalogHead__img {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.catalogHead__img img {
+  height: auto;
+  width: 810px;
+}
+
+.catalogAbout {
+  margin-top: 96px;
+}
+
+.catalogAbout .heading__title span::before {
+  content: "オンラインカタログ";
+}
+
+.catalogAbout__column {
+  column-gap: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 64px;
+}
+
+.catalogAboutBox__img {
+  padding-left: 20px;
+  position: relative;
+  border-radius: 10px;
+}
+
+.catalogAboutBox__img::before {
+  background: url("../../images/catalog/catalogAbout_q.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: -20px;
+  content: "";
+  height: 55px;
+  left: -20px;
+  position: absolute;
+  width: 55px;
+}
+
+.catalogAboutBox__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+.catalogAboutBox__text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-top: 24px;
+  padding-left: 20px;
+}
+
+.catalogForm {
+  margin-top: 120px;
+  padding-bottom: 80px;
+}
+
+.catalogForm .heading__title span::before {
+  content: "資料ダウンロード";
+}
+
+.catalogForm__word {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-top: 64px;
+  text-align: center;
+}
+
+.catalogForm__word span {
+  color: var(--colorSub);
+}
+
+.catalogForm__area {
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.catalogFormItem {
+  border-bottom: 1px solid #dcdcdc;
+  column-gap: 32px;
+  display: grid;
+  grid-template-columns: auto 640px;
+  margin-top: 64px;
+  padding-bottom: 40px;
+}
+
+.catalogFormItem__title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.catalogFormItem__title span {
+  color: #ea5503;
+}
+
+.catalogForm__area input[type="text"],
+.catalogForm__area input[type="tel"],
+.catalogForm__area input[type="email"],
+.catalogForm__area input[type="number"],
+.catalogForm__area textarea {
+  border: 1px solid #ea5503;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #3d4552;
+  font-size: var(--fontMax16Min14);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  padding: 16px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.catalogFormItem__input--texearea textarea {
+  margin-top: 24px;
+}
+
+.wpcf7-form-control.wpcf7-radio {
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 16px;
+}
+
+.wpcf7-list-item-label a {
+  color: #3d4552;
+  text-decoration: underline;
+}
+
+.wpcf7-list-item:has(input[type="radio"])::after {
+  background: #fff;
+  border-radius: 50%;
+  content: "";
+  height: 12px;
+  left: 7px;
+  pointer-events: none;
+  position: absolute;
+  top: 9px;
+  width: 12px;
+}
+
+.catalogFormItem__input--notes {
+  font-size: 13px;
+  margin-top: 24px;
+}
+
+.formDisclaimer {
+  background: #fff5d5 !important;
+}
+
+.catalogHead__img {
+  position: relative;
+  max-width: 740px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.catalogHead__img img {
+  width: 100%;
+}
+
+.catalogHead__img-inner {
+  position: absolute;
+  top: 46%;
+  left: 49.5%;
+  width: 70%;
+  height: 82%;
+  transform: translate(-50%, -50%);
+  display: block;
+  overflow-y: scroll;
+}
+
+.wp-block-lazyblock-mockup-pc-block {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: auto;
+}
+
+.catalogHead__img-inner li img {
+  width: auto;
+}
+
+@media screen and (max-width: 992px) {
+  .catalogFormItem {
+    grid-template-columns: 100%;
+    row-gap: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .catalog {
+    padding-bottom: 48px;
+  }
+
+  .catalogHead__title + .catalogHead__title {
+    margin-top: 16px;
+  }
+
+  .catalogHead__title span {
+    font-size: 18px;
+    padding: 0 3px 4px;
+  }
+
+  .catalogHead__word {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+
+  .catalogHead__img {
+    margin-top: 48px;
+  }
+
+  .catalogHead__img img {
+    width: 100%;
+  }
+
+  .catalogAbout {
+    margin-top: 80px;
+  }
+
+  .catalogAbout__column {
+    grid-template-columns: 100%;
+    margin-top: 32px;
+    row-gap: 24px;
+  }
+
+  .catalogAboutBox__title {
+    font-size: 16px;
+  }
+
+  .catalogAboutBox__text {
+    font-size: 14px;
+  }
+
+  .catalogForm {
+    margin-top: 96px;
+    padding-bottom: 48px;
+  }
+
+  .catalogForm__word {
+    font-size: 15px;
+    margin-top: 40px;
+  }
+
+  .catalogForm__area {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .catalogFormItem {
+    margin-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  .catalogFormItem__title {
+    font-size: 15px;
+  }
+
+  .catalogFormItem__title br {
+    display: none;
+  }
+
+  .catalogForm__area input[type="text"],
+  .catalogForm__area input[type="tel"],
+  .catalogForm__area input[type="email"],
+  .catalogForm__area input[type="number"],
+  .catalogForm__area textarea {
+    box-sizing: border-box;
+  }
+
+  .catalogFormItem__input--texearea textarea {
+    margin-top: 24px;
+  }
+
+  .wpcf7-form-control.wpcf7-radio {
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 16px;
+  }
+
+  .wpcf7-list-item-label a {
+    color: #3d4552;
+    text-decoration: underline;
+  }
+
+  .wpcf7-list-item {
+    margin: 0 !important;
+  }
+
+  .catalogFormItem__input--notes {
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 24px;
+  }
+
+  .formDisclaimer {
+    background: #fff5d5 !important;
+  }
+}

@@ -1,0 +1,429 @@
+.contents {
+    margin-top: calc(8px * 6);
+}
+
+.columnGrid--2col {
+    gap: calc(8px * 5);
+}
+
+.itemLife a {
+    align-items: center;
+    aspect-ratio: 550 / 400;
+    border-radius: 2vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.itemLife.is-type1 a {
+    background: url("../../images/lifestyle/lifestayle_img_1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemLife.is-type2 a {
+    background: url("../../images/lifestyle/lifestayle_img_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemLife.is-type3 a {
+    background: url("../../images/lifestyle/lifestayle_img_3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemLife.is-type4 a {
+    background: url("../../images/lifestyle/lifestayle_img_4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemLife a::before {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 2vmax;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: 0.4s;
+    width: 100%;
+}
+
+.itemLife a:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.itemLife__title {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.8;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.itemLife__lead {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.8;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.itemLife__lead span {
+    font-size: 24px;
+}
+
+/* 詳細ページ　*/
+.mv {
+    background: #fff5d5;
+    padding: 0 0 calc(8px * 5);
+}
+
+.mv__inner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mvCatch__title {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+}
+
+.mvCatch__word {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    margin-top: calc(8px * 4);
+    position: relative;
+}
+
+.mvCatch__word::before {
+    background: url("../../images/common/hero_title_deco.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    height: 22px;
+    left: calc(-8px * 5);
+    position: absolute;
+    top: calc(-8px * 2.5);
+    transform: rotate(-35deg);
+    width: 55px;
+}
+
+.mvCatch__word span {
+    font-size: 26px;
+}
+
+.mvThumbnail {
+    position: relative;
+    z-index: 1;
+}
+
+.mvThumbnail::before {
+    background-color: #ffde73;
+    content: "";
+    height: 100%;
+    left: calc(8px * 3);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.mvThumbnail img {
+    height: 390px;
+    position: relative;
+    top: calc(-8px * 3);
+    width: auto;
+    z-index: 100;
+}
+
+.outline .heading {
+    margin-top: calc(8px * 10);
+}
+
+.outline .heading__title span::before {
+    content: "仕様";
+}
+
+.outline__list {
+    align-items: center;
+    column-gap: calc(8px * 2);
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: calc(8px * 5);
+}
+
+.outline__list li {
+    background: var(--colorSub);
+    border-radius: 100vmax;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 16px;
+}
+
+.outline__area {
+    align-items: center;
+    column-gap: calc(8px * 4);
+    display: grid;
+    grid-template-columns: auto 480px;
+    margin-top: calc(8px * 5);
+}
+
+.outlineDetails__thumbnail {
+    text-align: center;
+}
+
+.outlineDetailsBox {
+    border-bottom: 1px solid #d2d2d2;
+    display: grid;
+    font-size: 16px;
+    font-weight: 500;
+    grid-template-columns: 1fr 1fr;
+    line-height: 1.8;
+    padding: calc(8px * 3) 0 calc(8px * 2);
+}
+
+.recommend .heading {
+    margin-top: calc(8px * 20);
+}
+
+.recommend .heading__title span::before {
+    content: "設計士からの声";
+}
+
+.recommend__list {
+    margin: calc(8px * 10) auto;
+    max-width: 1080px;
+    width: 100%;
+}
+
+.itemRecommend {
+    align-items: center;
+    column-gap: calc(8px * 4);
+    display: grid;
+    grid-template-columns: auto 170px;
+}
+
+.itemRecommend:nth-of-type(n + 2) {
+    margin-top: calc(8px * 6);
+}
+
+.itemRecommendHead__column {
+    align-items: center;
+    column-gap: calc(8px * 2);
+    display: flex;
+}
+
+.itemRecommendHead__number {
+    color: var(--colorSub);
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.itemRecommendHead__title {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-decoration: underline;
+    text-decoration-color: #ffde73;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.55em;
+    text-underline-offset: -0.2em;
+}
+
+.itemRecommendHead__text {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-top: calc(8px * 3);
+}
+
+.itemRecommend__icon {
+    text-align: center;
+}
+
+.itemRecommend__icon img {
+    height: auto;
+    width: 70%;
+}
+
+.recommend__more {
+    margin-top: calc(8px * 10);
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .outline__area {
+        grid-template-columns: 100%;
+    }
+
+    .outlineDetailsBox {
+        grid-template-columns: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contents {
+        margin-top: calc(8px * 4);
+    }
+
+    .columnGrid--2col {
+        gap: calc(8px * 4);
+        grid-template-columns: 100%;
+    }
+
+    .itemLife a {
+        height: 300px;
+        width: 100%;
+    }
+
+    .itemLife__title {
+        font-size: 16px;
+    }
+
+    .itemLife__lead {
+        font-size: 24px;
+    }
+
+    .itemLife__lead span {
+        font-size: 18px;
+    }
+
+    .mv {
+        background: #fff5d5;
+        padding: calc(8px * 5) 0 calc(8px * 5);
+    }
+
+    .mv__inner {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .mvCatch__title {
+        font-size: 18px;
+    }
+
+    .mvCatch__word {
+        font-size: 36px;
+        margin-top: calc(8px * 4);
+    }
+
+    .mvCatch__word::before {
+        height: 18px;
+        left: calc(-8px * 2);
+        top: calc(-8px * 2.5);
+        width: 40px;
+    }
+
+    .mvCatch__word span {
+        font-size: 18px;
+    }
+
+    .mvThumbnail {
+        margin-top: calc(8px * 4);
+    }
+
+    .mvThumbnail::before {
+        left: calc(8px * 2);
+        top: calc(8px * 2);
+    }
+
+    .mvThumbnail img {
+        height: auto;
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+
+    .outline .heading {
+        margin-top: calc(8px * 10);
+    }
+
+    .outline .heading__title span::before {
+        content: "仕様";
+    }
+
+    .outline__list {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+        gap: calc(8px * 1);
+        margin-top: calc(8px * 4);
+    }
+
+    .outline__list li {
+        padding: 4px 12px;
+    }
+
+    .outline__area {
+        grid-template-columns: 100%;
+        margin-top: calc(8px * 3);
+        row-gap: calc(8px * 3);
+    }
+
+    .outlineDetailsBox {
+        font-size: 15px;
+        grid-template-columns: 100%;
+        padding: calc(8px * 2) 0 calc(8px * 2);
+    }
+
+    .recommend .heading {
+        margin-top: calc(8px * 12);
+    }
+
+    .recommend__list {
+        margin: calc(8px * 6) auto;
+    }
+
+    .itemRecommend {
+        align-items: center;
+        column-gap: calc(8px * 4);
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: calc(8px * 3);
+    }
+
+    .itemRecommend:nth-of-type(n + 2) {
+        margin-top: calc(8px * 6);
+    }
+
+    .itemRecommendHead__column {
+        align-items: center;
+        column-gap: calc(8px * 2);
+        display: flex;
+    }
+
+    .itemRecommendHead__number {
+        font-size: 28px;
+        line-height: 1.7;
+    }
+
+    .itemRecommendHead__title {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .itemRecommend__icon img {
+        height: 80px;
+        width: auto;
+    }
+
+    .recommend__more {
+        margin-top: calc(8px * 6);
+    }
+}

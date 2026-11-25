@@ -1,0 +1,57 @@
+.shop__list {
+  margin-top: 80px;
+}
+
+.shopCard {
+  column-gap: 40px;
+  display: grid;
+  grid-template-columns: 580px auto;
+}
+
+.shopCardDetails__name {
+  background: linear-gradient(transparent 70%, #ffde73 70%);
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 8px 4px 8px;
+}
+
+.shopCardDetailsUnit {
+  border-bottom: 1px dashed #d2d2d2;
+  display: grid;
+  font-size: 15px;
+  font-weight: 500;
+  grid-template-columns: 130px auto;
+  margin-top: 40px;
+  padding: 16px 0;
+}
+
+.shopCardDetailsUnit:nth-of-type(n+2) {
+  margin-top: 0;
+}
+
+.shopCardDetailsUnit__text a {
+  color: var(--colorBlack);
+}
+
+@media screen and (max-width: 767px) {
+  .shop__list {
+    margin-top: 40px;
+  }
+
+  .shopCard {
+    grid-template-columns: 100%;
+    row-gap: 24px;
+  }
+
+  .shopCardDetails__name {
+    font-size: 18px;
+    padding: 0 6px 4px 6px;
+  }
+
+  .shopCardDetailsUnit {
+    grid-template-columns: 100%;
+    margin-top: 40px;
+    row-gap: 16px;
+  }
+}

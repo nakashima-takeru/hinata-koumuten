@@ -1,0 +1,29 @@
+:root {
+  --c-black: #3d4552;
+  --c-gray: #929292;
+  --c-lightGray: #d2d2d2;
+  --c-orange: #fbb35f;
+  --colorBlack: #3d4552;
+  --colorBorder: #d2d2d2;
+  --colorGreen: #3b961b;
+  --colorMain: #f5a455;
+  --colorOrange: #f89939;
+  --colorSub: #ea5503;
+  --colorSub2: #ffde73;
+  --colorWhite: #fff;
+  --familyNotoSans: "Noto Sans JP", sans-serif;
+  --familyRoboto: "Roboto", "Noto Sans JP",  sans-serif;
+  --familySacramento: "Sacramento", "Noto Sans JP", cursive;
+  --fontMax14Min12: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  --fontMax16Min14: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
+  --fontMax18Min16: clamp(1rem, 0.956rem + 0.19vw, 1.125rem);
+  --header-height: 120px;
+  --z-index-fixButton: 90;
+  --z-index-header: 100;
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --header-height: 80px;
+  }
+}

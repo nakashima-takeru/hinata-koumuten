@@ -1,0 +1,317 @@
+.resCal {
+  box-sizing: border-box;
+  display: none;
+  grid-column: 1;
+  grid-row: 1;
+  max-width: 810px;
+}
+
+.resCal.active {
+  display: block;
+}
+
+.resCal__container {
+  position: relative;
+}
+
+.resCal__header {
+  align-items: center;
+  border: 1px solid #000;
+  border-bottom: none;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  position: relative;
+}
+
+.resCal__header p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.resCal__swiper--button {
+  align-items: center;
+  background: #35c6f2;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  height: 50px;
+  justify-content: center;
+  max-width: 100px;
+  position: absolute;
+  text-decoration: underline;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.resCal__swiper--button.js-resCal__back {
+  left: 20px;
+}
+
+.resCal__swiper--button.js-resCal__next {
+  right: 20px;
+}
+
+.resCal__body--head,
+.resCal__body--main {
+  border-left: 1px solid #000;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.resCal__day {
+  align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  position: relative;
+}
+
+.resCal__body--head .resCal__day {
+  border-top: 1px solid;
+}
+
+.resCal__day.label {
+  height: 30px;
+}
+
+.resCal__day.label.pink {
+  background: rgba(255, 224, 245, 0.6);
+}
+
+.resCal__day.label.blue {
+  background: rgba(194, 255, 255, 0.6);
+}
+
+.resCal__day.empty {
+  background: #f5f5f5;
+}
+
+.resCal__day--number {
+  left: 5px;
+  position: absolute;
+  top: 5px;
+}
+
+.resCal__day--full,
+.resCal__day--space,
+.resCal__day--limited {
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.resCal__day--full::before,
+.resCal__day--full::after {
+  background-color: #f24ee2;
+  content: "";
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transform-origin: center;
+  width: 100%;
+}
+
+.resCal__day--full::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.resCal__day--space::before {
+  border: 2px solid #35f2ef;
+  border-radius: 50%;
+  content: "";
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+}
+
+.resCal__day--limited {
+  border-bottom: 2px solid #ea5503;
+  height: 26px;
+  width: 26px;
+}
+
+.resCal__day--limited::before,
+.resCal__day--limited::after {
+  background: #ea5503;
+  content: "";
+  height: 22px;
+  position: absolute;
+  transform-origin: bottom;
+  width: 2px;
+}
+
+.resCal__day--limited::before {
+  bottom: 0;
+  left: 0;
+  transform: rotate(35deg);
+}
+
+.resCal__day--limited::after {
+  bottom: 0;
+  right: 0;
+  transform: rotate(-35deg);
+}
+
+.resCal__dummy img {
+  max-width: 800px;
+  width: 100%;
+}
+
+.resCal__group {
+  display: none;
+}
+
+.resCal__disclaimer {
+  list-style: disc;
+  margin-left: 30px;
+  margin-top: 14px;
+}
+
+.resCal__disclaimer li {
+  color: #3d4552;
+  font-family: var(--familyNotoSans);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+.resCal__disclaimer li .orange {
+  color: #ea5503;
+}
+
+@media screen and (max-width: 767px) {
+  .resCal__swiper--button {
+    font-size: 14px;
+    height: 40px;
+    max-width: 80px;
+  }
+  .resCal__swiper--button.js-resCal__next {
+    right: 10px;
+  }
+  .resCal__swiper--button.js-resCal__back {
+    left: 10px;
+  }
+  .resCal__day--number {
+    font-size: 12px;
+    left: 3px;
+    top: 3px;
+  }
+  .resCal__day {
+    height: 60px;
+  }
+  .resCal__day--full,
+  .resCal__day--space {
+    height: 16px;
+    width: 16px;
+  }
+}
+
+/* ResCal Modal */
+
+.resCalModal {
+  background: rgba(0,0,0,0.8);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  left: 50%;
+  max-width: 320px;
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  width: 100%;
+  z-index: 10;
+}
+
+.resCalModal__head {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.resCalModal__head p {
+  color: #fff;
+  font-family: var(--familyNotoSans);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.resCalModal__head .closeButton {
+  border: 3px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 20px;
+  position: absolute;
+  right: -8px;
+  top: -12px;
+  width: 20px;
+}
+
+.resCalModal__head .closeButton::before,
+.resCalModal__head .closeButton::after {
+  background: #fff;
+  content: "";
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform-origin: center;
+  width: calc(100% - 4px);
+}
+
+.resCalModal__head .closeButton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.resCalModal__head .closeButton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.resCalModal__body {
+  padding: 12px 0;
+}
+
+.resCalModal__list {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+}
+
+.resCalModal__list li {
+  align-items: center;
+  background: #35c6f2;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--familyNotoSans);
+  font-size: 16px;
+  font-weight: 700;
+  height: 36px;
+  justify-content: center;
+  letter-spacing: 0.04em;
+}
+
+.resCal__day span,
+.resCal__day .resCal__day--holiday {
+  cursor: pointer;
+}

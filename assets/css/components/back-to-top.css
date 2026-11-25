@@ -1,0 +1,15 @@
+.backButton {
+    aspect-ratio: 1;
+    background: var(--c-lightGray);
+    border: 1px solid var(--c-lightGray);
+    border-radius: 9999em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    display: inline-grid;
+    height: 54px;
+    place-items: center;
+    transition: opacity 0.3s;
+}
+
+.backButton:hover {
+    opacity: 0.9;
+}

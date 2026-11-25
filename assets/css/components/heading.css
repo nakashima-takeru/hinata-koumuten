@@ -1,0 +1,145 @@
+.heading {
+  text-align: center;
+}
+
+.heading__title {
+  color: #f5a455;
+  font-family: var(--familySacramento);
+  font-size: 88px;
+  font-weight: 400;
+}
+
+.heading__title span {
+  display: inline-block;
+  position: relative;
+}
+
+.heading__title span::before {
+  color: #3d4552;
+  content: "";
+  font-family: var(--familyNotoSans);
+  font-size: 12px;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  top: -30%;
+  z-index: 1;
+}
+
+.heading__title span::after {
+  background: #ffde73;
+  border-radius: 50%;
+  content: "";
+  height: 22px;
+  left: -3%;
+  position: absolute;
+  top: -35%;
+  width: 22px;
+}
+
+.sectionHead {
+  text-align: center;
+}
+
+.sectionHead__title {
+  color: var(--colorBlack);
+  font-size: 24px;
+  letter-spacing: 4px;
+}
+
+.sectionHead__title span {
+  color: var(--colorMain);
+  font-size: 36px;
+}
+
+.sectionHead__word {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-top: calc(8px * 2);
+}
+
+.sectionHead__word span {
+  font-size: 42px;
+}
+
+.sectionHead__word small {
+  font-size: 24px;
+  margin: 0 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .heading__title {
+    font-size: 46px;
+  }
+
+  .heading__title span::before {
+    top: -60%;
+  }
+
+  .heading__title span::after {
+    top: -70%;
+  }
+
+  .sectionHead__title {
+    font-size: 24px;
+    letter-spacing: 4px;
+  }
+
+  .sectionHead__title span {
+    font-size: 32px;
+  }
+
+  .sectionHead__word {
+    font-size: 17px;
+    letter-spacing: 1px;
+    margin-top: calc(8px * 2);
+  }
+
+  .sectionHead__word span {
+    font-size: 28px;
+  }
+
+  .sectionHead__word small {
+    font-size: 16px;
+    margin: 0 1px;
+  }
+}
+
+.headingType1 {
+  text-align: center;
+}
+
+.headingType1__title {
+  color: var(--colorMain);
+  font-family: var(--familySacramento);
+  font-size: 88px;
+  font-weight: 400;
+  line-height: 1.19;
+  position: relative;
+}
+
+.headingType1__title::before {
+  content: url("../../images/common/img_heading-type1.svg");
+  display: inline-block;
+  left: 50%;
+  position: absolute;
+  top: -70px;
+  transform: translateX(-50%);
+}
+
+.headingType1__word {
+  font-family: var(--familyNotoSans);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .headingType1__title {
+    font-size: 56px;
+    margin-bottom: 8px;
+  }
+
+  .headingType1__title::before {
+    top: -56px;
+  }
+}
