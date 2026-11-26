@@ -1,0 +1,17 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="26.25" height="26.25" viewBox="0 0 26.25 26.25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 24">
+<g id="Rectangle 35">
+<rect width="26.25" height="26.25" fill="white"/>
+<mask id="stroke0_0_465" fill="white">
+<path d="M0 0H26.25V26.25H0V0Z"/>
+</mask>
+<rect width="26.25" height="26.25" stroke-width="1.875" stroke-linejoin="round" stroke="#CA6B0E" mask="url(#stroke0_0_465)"/>
+</g>
+<path id="Vector 29" d="M16.8741 7.49992H20.6241V0.93742" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round" stroke="#CA6B0E"/>
+<path id="Vector 30" d="M9.37622 14.063H16.8762" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round" stroke="#CA6B0E"/>
+<path id="Vector 31" d="M20.6256 14.063H25.3131" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round" stroke="#CA6B0E"/>
+<path id="Vector 32" d="M8.43689 18.7499H4.68689V25.3124" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round" stroke="#CA6B0E"/>
+<path id="Vector 27" d="M13.1247 0.93742V25.3124" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round" stroke="#CA6B0E"/>
+<path id="Vector 28" d="M0.937805 14.063H6.56281" stroke-width="0.9375" stroke-linecap="round" stroke-linejoin="round" stroke="#CA6B0E"/>
+</g>
+</svg>

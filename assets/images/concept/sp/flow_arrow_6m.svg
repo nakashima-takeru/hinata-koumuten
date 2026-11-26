@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="575" height="15" viewBox="0 0 575 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#229;&#183;&#166;&#229;&#143;&#179;&#231;&#159;&#162;&#229;&#141;&#176;">
+<path id="Rectangle 31" d="M573.835 7.49951V6.99951H7.16504V7.49951V7.99951H573.835V7.49951Z" fill="#D2D2D2"/>
+<g id="Polygon 2">
+<path d="M575 7.49998L567.695 13.9952L567.695 1.00479L575 7.49998Z" fill="#D2D2D2"/>
+<mask id="stroke0_0_341" fill="white">
+<path d="M575 7.49998L567.695 13.9952L567.695 1.00479L575 7.49998Z"/>
+</mask>
+<path d="M575 7.49998L567.695 13.9952L567.695 1.00479L575 7.49998Z" stroke="#D2D2D2" mask="url(#stroke0_0_341)"/>
+</g>
+<g id="icon__arrow--gray">
+<path d="M6.43011e-07 7.50002L7.305 1.00483V13.9952L6.43011e-07 7.50002Z" fill="#D2D2D2"/>
+<mask id="stroke1_0_341" fill="white">
+<path d="M6.43011e-07 7.50002L7.305 1.00483V13.9952L6.43011e-07 7.50002Z"/>
+</mask>
+<path d="M6.43011e-07 7.50002L7.305 1.00483V13.9952L6.43011e-07 7.50002Z" stroke="#D2D2D2" mask="url(#stroke1_0_341)"/>
+</g>
+</g>
+</svg>
