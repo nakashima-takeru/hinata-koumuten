@@ -79,7 +79,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<?php elseif (is_page("form-visitor")) : ?>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/page.form-visitor.css?<?php echo date("Ymd-Hi"); ?>">
 	<?php elseif (is_page("concept")) : ?>
+		<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@500;700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/page.concept.css?<?php echo date("Ymd-Hi"); ?>">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/page.concept-sp.css?<?php echo date("Ymd-Hi"); ?>">
 	<?php elseif (is_page("catalog")) : ?>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/page.catalog.css?<?php echo date("Ymd-Hi"); ?>">
 	<?php elseif (is_archive("")) : ?>

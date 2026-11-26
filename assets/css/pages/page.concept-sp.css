@@ -1,0 +1,1373 @@
+/* ==========================================================================
+   Concept page : SP (Figma SP frame 375px, node 4551:4689)
+   All values are taken from the Figma SP design.
+   ========================================================================== */
+@media screen and (max-width: 767px) {
+  /* ---------------------------------------------------------------- base */
+  .cpMain .cp-only-pc {
+    display: none !important;
+  }
+
+  .cpMain .cp-sp {
+    display: inline;
+  }
+
+  .cpMain {
+    padding-bottom: 0;
+  }
+
+  .cpMain .cpX__blank {
+    display: block;
+    height: 1lh;
+  }
+
+  .cpMain .cpSection {
+    padding: 50px 20px 80px;
+  }
+
+  .cpMain .cpContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: none;
+    padding: 0;
+  }
+
+  .cpMain .cpContainer > * {
+    margin: 0;
+  }
+
+  .cpMain .cpBox {
+    border-radius: 30px;
+  }
+
+  /* ------------------------------------------------------------------ MV */
+  .cpMain .cpMv {
+    padding: 24px 20px 50px;
+    text-align: left;
+  }
+
+  .cpMain .cpMv__inner {
+    max-width: none;
+  }
+
+  .cpMain .cpMv__en {
+    align-items: center;
+    border-left: 3px solid var(--cp-main);
+    color: #231815;
+    display: flex;
+    font-size: 14px;
+    height: 23px;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    padding: 0 0 0 16px;
+  }
+
+  .cpMain .cpMv__sub {
+    color: #231815;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 38px;
+    margin-top: 20px;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpMv__title {
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    margin-top: 20px;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpMv__text {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    line-height: 1.9;
+    margin-top: 32px;
+  }
+
+  .cpMain .cpMv__text p {
+    margin: 0;
+  }
+
+  .cpMain .cpMv__text p + p {
+    margin-top: 1.9em;
+  }
+
+  /* -------------------------------------------------------------- anchor */
+  .cpMain .cpAnchor {
+    background: #fff;
+    padding: 0;
+  }
+
+  .cpMain .cpAnchor .cpAnchor__image {
+    aspect-ratio: 375 / 250;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .cpMain .cpAnchor .cpAnchor__image img {
+    height: auto;
+    left: -4%;
+    max-width: none;
+    position: absolute;
+    top: -27.2%;
+    width: 128.267%;
+  }
+
+  .cpMain .cpAnchor__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 0;
+    max-width: none;
+    padding: 50px 20px;
+  }
+
+  .cpMain .cpAnchor__list li {
+    width: 298px;
+  }
+
+  .cpMain .cpAnchor__btn {
+    border-radius: 8px;
+    gap: 10px;
+    height: 50px;
+    padding: 0 24px;
+  }
+
+  .cpMain .cpAnchor__num {
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  .cpMain .cpAnchor__label {
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  .cpMain .cpAnchor__arrow {
+    display: none;
+  }
+
+  /* ------------------------------------------------------ section heading */
+  .cpMain .cpHead {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .cpMain .cpHead__main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .cpMain .cpHead__group {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: max-content;
+  }
+
+  .cpMain #flow .cpHead__group {
+    height: 124px;
+  }
+
+  .cpMain .cpHead__en {
+    align-items: center;
+    color: #231815;
+    display: flex;
+    font-size: 14px;
+    height: 23px;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+  }
+
+  .cpMain .cpHead__title {
+    align-items: flex-start;
+    border-left: 5px solid var(--cp-main);
+    display: flex;
+    gap: 12px;
+    min-height: 0;
+    padding-left: 16px;
+  }
+
+  .cpMain .cpHead__num {
+    font-size: 40px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpHead__ja {
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpHead__catch {
+    color: #221815;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .cpMain .cpHead__illust {
+    flex-shrink: 0;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    width: 219.471px;
+  }
+
+  .cpMain .cpIllustPrice {
+    aspect-ratio: auto;
+    height: 130px;
+    width: 219.471px;
+  }
+
+  .cpMain .cpHead__illust .cpIllustPlan {
+    height: 129.235px;
+    left: 24.47px;
+    position: absolute;
+    top: 0.24px;
+    width: 164.412px;
+  }
+
+  .cpMain .cpIllustSp--flow img {
+    height: 124px;
+    left: 11.23px;
+    max-width: none;
+    position: absolute;
+    top: 3.04px;
+    width: 190px;
+  }
+
+  .cpMain .cpAfterIllust {
+    height: 114px;
+    left: 0.23px;
+    max-width: none;
+    position: absolute;
+    top: 5.71px;
+    width: 215px;
+  }
+
+  /* lead */
+  .cpMain .cpLead {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cpMain .cpContainer > .cpLead--afterIllust {
+    margin-top: -8px;
+  }
+
+  .cpMain .cpLead__strong {
+    color: var(--cp-main);
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .cpMain .cpLead--small .cpLead__strong {
+    font-size: 18px;
+  }
+
+  .cpMain .cpLead__body {
+    color: #221815;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+  }
+
+  .cpMain .cpLead__body p {
+    margin: 0;
+  }
+
+  .cpMain .cpLead__body p + p {
+    margin-top: 2em;
+  }
+
+  /* --------------------------------------------------------- 01 price */
+  .cpMain .cpPrice {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .cpMain .cpPrice__tables {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+
+  .cpMain .cpPriceTable {
+    width: 100%;
+  }
+
+  .cpMain .cpPriceTable__head {
+    font-size: 18px;
+    gap: 16px;
+    height: 60px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  .cpMain .cpPriceTable__list {
+    padding-top: 20px;
+  }
+
+  .cpMain .cpPriceTable__row {
+    padding: 4px 0;
+  }
+
+  .cpMain .cpPriceTable__row:first-child, .cpMain .cpPriceTable__row.is-total {
+    padding: 10px 0;
+  }
+
+  .cpMain .cpPriceTable__row dt {
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  .cpMain .cpPriceTable__row dd {
+    align-items: flex-end;
+    line-height: 38px;
+  }
+
+  .cpMain .cpPriceTable__plus {
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+    width: 24px;
+  }
+
+  .cpMain .cpPriceTable__num {
+    font-size: 34px;
+  }
+
+  .cpMain .cpPriceTable__unit {
+    font-size: 14px;
+  }
+
+  .cpMain .cpPrice__arrow {
+    display: none;
+  }
+
+  .cpMain .cpPrice__point {
+    align-items: center;
+    align-self: stretch;
+    gap: 24px;
+    height: 337px;
+    justify-content: flex-start;
+    max-width: none;
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .cpMain .cpCheckList {
+    gap: 16px;
+    width: 292px;
+  }
+
+  .cpMain .cpCheckList li {
+    font-size: 18px;
+    gap: 4px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpCheckList li::before {
+    height: 40px;
+    width: 40px;
+  }
+
+  .cpMain .cpPrice__people {
+    display: block;
+    height: 97px;
+    width: 158px;
+  }
+
+  .cpMain .cpResult {
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .cpMain .cpResult__text {
+    align-self: stretch;
+    color: #231815;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpResult__line1, .cpMain .cpResult__line2 {
+    display: inline;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpResult__num, .cpMain .cpResult__num--lg {
+    font-size: 24px;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpPie {
+    height: 244.96px;
+    width: 244.96px;
+  }
+
+  /* ------------------------------------------------------ 02 standard */
+  .cpMain .cpStdHouse {
+    align-self: center;
+    container-type: normal;
+    height: 248px;
+    margin: 0;
+    width: 350px;
+  }
+
+  .cpMain .cpStdHouse__pc {
+    display: none;
+  }
+
+  .cpMain .cpStdHouse__sp {
+    display: block;
+    height: 248px;
+    position: relative;
+    width: 350px;
+  }
+
+  .cpMain .cpStdHouse__sp img {
+    display: block;
+    height: auto;
+    margin-top: -13.95px;
+    max-width: none;
+    width: 351px;
+  }
+
+  .cpMain .cpStdHot {
+    height: 19.5px;
+    position: absolute;
+  }
+
+  .cpMain .cpStdHot.is-zeh {
+    left: 0;
+    top: 0;
+    width: 91px;
+  }
+  .cpMain .cpStdHot.is-solar {
+    left: 259.8px;
+    top: 0;
+    width: 91px;
+  }
+  .cpMain .cpStdHot.is-window {
+    left: 0.5px;
+    top: 116px;
+    width: 91px;
+  }
+  .cpMain .cpStdHot.is-damper {
+    left: 223.5px;
+    top: 107px;
+    width: 126.7px;
+  }
+  .cpMain .cpStdHot.is-hinoki {
+    left: 0;
+    top: 228.7px;
+    width: 113.7px;
+  }
+  .cpMain .cpStdHot.is-aqua {
+    left: 157.5px;
+    top: 229px;
+    width: 192.7px;
+  }
+
+  .cpMain .cpStdLead {
+    color: #221815;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    text-align: center;
+    width: 100%;
+  }
+
+  .cpMain .cpStdLead span {
+    color: inherit;
+  }
+
+  .cpMain .cpBar {
+    font-family: var(--cp-gothic);
+    font-size: 18px;
+    height: 60px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    min-height: 60px;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  /* spec boxes */
+  .cpMain .cpSpec {
+    gap: 40px;
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .cpMain .cpSpec__head {
+    align-items: stretch;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .cpMain .cpSpec__sub {
+    color: #221815;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+  }
+
+  .cpMain .cpSpec__titleWrap {
+    gap: 4px 8px;
+    justify-content: center;
+  }
+
+  .cpMain .cpSpec__title {
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpSpec__tag {
+    font-size: 12px;
+    height: 24px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    padding: 0 12px;
+  }
+
+  .cpMain .cpSpec__note {
+    flex-basis: 100%;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .cpMain .cpX__h4 {
+    font-size: 18px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpX__text {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+  }
+
+  .cpMain .cpX__text--bold {
+    font-weight: 700;
+  }
+
+  .cpMain .cpX__caption {
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+  }
+
+  .cpMain .cpSpImg {
+    display: block;
+    height: auto;
+    max-width: none;
+    width: 291px;
+  }
+
+  .cpMain .cpSpImg--wide {
+    width: 295px;
+  }
+
+  .cpMain .cpSpImg--uvalue {
+    margin-left: -2px;
+    width: 295px;
+  }
+
+  .cpMain .cpSpSpec__block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cpMain .cpSpBars {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cpMain .cpSpBars span {
+    background: var(--cp-main);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    padding: 6px;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpSpBars--full span:first-child {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  /* solar */
+  .cpMain .cpSolarSp {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cpMain .cpSolarSp__group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cpMain .cpSolarSp__warranty {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cpMain .cpSolarSp__lead {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cpMain .cpSolarSp__h {
+    color: var(--cp-main);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpSolarSp__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cpMain .cpSolarSp__box {
+    border: 1px solid #000;
+    color: var(--cp-text2);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 2;
+    padding: 4px 16px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpSolarSp__box em {
+    color: var(--cp-main);
+    font-style: normal;
+  }
+
+  .cpMain .cpSolarSp__small {
+    display: flex;
+    font-size: 10px;
+    gap: 12px;
+    justify-content: center;
+    letter-spacing: 0.02em;
+    line-height: 2;
+  }
+
+  .cpMain .cpSolarSp__graph {
+    display: block;
+    height: auto;
+    width: 291px;
+  }
+
+  .cpMain .cpSolarSp__product {
+    display: block;
+    height: 295.27px;
+    width: 285px;
+  }
+
+  /* damper */
+  .cpMain .cpDmp__row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cpMain .cpDmp__main {
+    gap: 24px;
+    width: 100%;
+  }
+
+  .cpMain .cpDmp__spH {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .cpMain .cpDmp__spH .cpX__h4 {
+    line-height: 1.4;
+  }
+
+  .cpMain .cpDmp__spH sup {
+    font-size: 15.48px;
+    letter-spacing: 0.06em;
+    vertical-align: baseline;
+  }
+
+  .cpMain .cpX__photo {
+    align-self: flex-start;
+    aspect-ratio: auto;
+    height: 380px;
+    max-width: none;
+    width: 285px;
+  }
+
+  /* hinoki */
+  .cpMain .cpHnk__row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .cpMain .cpHnk__main {
+    gap: 24px;
+    width: 100%;
+  }
+
+  .cpMain .cpHnk__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cpMain .cpHnk__list li {
+    gap: 16px;
+  }
+
+  .cpMain .cpHnk__h {
+    font-size: 16px;
+    gap: 4px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpHnk__h span {
+    font-size: 20px;
+    height: auto;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+    margin-top: 0;
+    width: 32px;
+  }
+
+  /* insulation */
+  .cpMain .cpIns__row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cpMain .cpIns__main {
+    gap: 24px;
+    width: 100%;
+  }
+
+  .cpMain .cpIns__textBlock {
+    gap: 12px;
+  }
+
+  .cpMain .cpIns__aqua {
+    align-self: stretch;
+    gap: 40px;
+    width: 100%;
+  }
+
+  /* ---------------------------------------------------------- 03 plan */
+  .cpMain .cpPlanSp {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .cpMain .cpPlanSp__title {
+    color: var(--cp-text2);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .cpMain .cpPlanSp__list {
+    display: flex;
+    flex-direction: column;
+    height: 448px;
+  }
+
+  .cpMain .cpPlanSp__list li {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: 14px;
+    height: 96px;
+    position: relative;
+  }
+
+  .cpMain .cpPlanSp__list li + li {
+    margin-top: 21.33px;
+  }
+
+  .cpMain .cpPlanSp__list li + li::before, .cpMain .cpFlowSp__list li + li::before {
+    background: url("../../images/concept/sp/arrow_orange.svg") no-repeat center / contain;
+    content: "";
+    height: 20px;
+    position: absolute;
+    transform: rotate(90deg);
+    width: 13.333px;
+  }
+
+  .cpMain .cpPlanSp__list li + li::before {
+    left: 138.83px;
+    top: -21.33px;
+  }
+
+  .cpMain .cpPlanSp__icon, .cpMain .cpFlowSp__icon {
+    flex-shrink: 0;
+    padding: 8px;
+    width: 100px;
+  }
+
+  .cpMain .cpPlanSp__icon {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .cpMain .cpPlanSp__icon::before, .cpMain .cpFlowSp__icon::before {
+    background: #fef8ec;
+    border-radius: 400px;
+    content: "";
+    height: 80px;
+    left: 8px;
+    position: absolute;
+    top: 8px;
+    width: 84px;
+  }
+
+  .cpMain .cpPlanSp__icon {
+    height: 96px;
+  }
+
+  .cpMain .cpPlanSp__icon img {
+    height: auto;
+    position: relative;
+  }
+
+  .cpMain .cpPlanSp__list li:nth-child(1) .cpPlanSp__icon img {
+    width: 22.969px;
+  }
+  .cpMain .cpPlanSp__list li:nth-child(2) .cpPlanSp__icon img {
+    width: 29.531px;
+  }
+  .cpMain .cpPlanSp__list li:nth-child(3) .cpPlanSp__icon img {
+    width: 26.25px;
+  }
+  .cpMain .cpPlanSp__list li:nth-child(4) .cpPlanSp__icon img {
+    width: 29.73px;
+  }
+
+  .cpMain .cpPlanSp__label, .cpMain .cpFlowSp__label {
+    align-items: center;
+    color: var(--cp-black);
+    display: flex;
+    font-family: var(--familyNotoSans);
+    font-size: 14px;
+    font-weight: 700;
+    gap: 6px;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+
+  .cpMain .cpPlanSp__num, .cpMain .cpFlowSp__num {
+    color: var(--cp-main);
+    font-family: var(--cp-din);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+  }
+
+  /* buttons (03) */
+  .cpMain .cpBtnWrap {
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .cpMain .cpBtn {
+    border-radius: 8px;
+    font-size: 16px;
+    height: 50px;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    min-width: 280px;
+    padding: 0 24px;
+    width: 298px;
+  }
+
+  /* ---------------------------------------------------------- 04 flow */
+  .cpMain .cpFlowSp {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 30px 20px;
+    width: 100%;
+  }
+
+  .cpMain .cpFlowSp__head {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .cpMain .cpFlowSp__sub {
+    color: #221815;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+  }
+
+  .cpMain .cpFlowSp__title {
+    color: var(--cp-text2);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .cpMain .cpFlowSp__body {
+    height: 597.333px;
+    position: relative;
+  }
+
+  .cpMain .cpFlowSp__list {
+    display: flex;
+    flex-direction: column;
+    width: 218px;
+  }
+
+  .cpMain .cpFlowSp__list li {
+    align-items: center;
+    display: flex;
+    gap: 3px;
+    height: 96px;
+    position: relative;
+  }
+
+  .cpMain .cpFlowSp__list li + li {
+    margin-top: 29.333px;
+  }
+
+  .cpMain .cpFlowSp__list li + li::before {
+    left: 102.33px;
+    top: -24.67px;
+  }
+
+  .cpMain .cpFlowSp__icon {
+    height: 96px;
+    position: relative;
+  }
+
+  .cpMain .cpFlowSp__art {
+    height: 46.429px;
+    left: 17.5px;
+    position: absolute;
+    top: 24.79px;
+    width: 65px;
+  }
+
+  .cpMain .cpFlowSp__art img {
+    height: auto;
+    max-width: none;
+    position: absolute;
+  }
+
+  .cpMain .cpFlowSp__art--1 img {
+    height: 82.03%;
+    left: 26.92%;
+    top: 8.62%;
+    width: 46.21%;
+  }
+  .cpMain .cpFlowSp__art--3 img {
+    height: 84%;
+    left: 13.08%;
+    top: 7.54%;
+    width: 73.07%;
+  }
+  .cpMain .cpFlowSp__art--4 img {
+    height: 82.04%;
+    left: 9.23%;
+    top: 8.62%;
+    width: 80.81%;
+  }
+  .cpMain .cpFlowSp__art--5 img {
+    height: 73.24%;
+    left: 19.23%;
+    top: 16.15%;
+    width: 56.92%;
+  }
+
+  .cpMain .cpFlowSp__art--2 img.a {
+    height: 27.13px;
+    left: 13.5px;
+    top: 13px;
+    width: 19.37px;
+  }
+
+  .cpMain .cpFlowSp__art--2 img.b {
+    height: 21.21px;
+    left: 34px;
+    top: 6px;
+    width: 17.41px;
+  }
+
+  .cpMain .cpFlowSp__time {
+    height: 575px;
+    left: 198px;
+    position: absolute;
+    top: 11.17px;
+    width: 102px;
+  }
+
+  .cpMain .cpFlowSp__arrow {
+    left: 0;
+    position: absolute;
+    width: 60px;
+  }
+
+  .cpMain .cpFlowSp__arrow img {
+    height: 15px;
+    left: 37.5px;
+    max-width: none;
+    position: absolute;
+    top: 0;
+    transform: rotate(90deg);
+    transform-origin: 0 0;
+  }
+
+  .cpMain .cpFlowSp__arrow em {
+    align-items: center;
+    background: #fff;
+    color: #929292;
+    display: flex;
+    font-family: var(--familyNotoSans);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    justify-content: center;
+    left: 0;
+    letter-spacing: 0.03em;
+    line-height: 1.8;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    width: 60px;
+  }
+
+  .cpMain .cpFlowSp__arrow--2m {
+    height: 212.585px;
+    top: 0;
+  }
+
+  .cpMain .cpFlowSp__arrow--2m img {
+    width: 212.585px;
+  }
+
+  .cpMain .cpFlowSp__arrow--2m em {
+    height: 29.217px;
+    top: 91.68px;
+  }
+
+  .cpMain .cpFlowSp__arrow--4m {
+    height: 347.415px;
+    top: 227.585px;
+  }
+
+  .cpMain .cpFlowSp__arrow--4m img {
+    width: 347.415px;
+  }
+
+  .cpMain .cpFlowSp__arrow--4m em {
+    height: 29.217px;
+    top: 159.1px;
+  }
+
+  .cpMain .cpFlowSp__arrow--6m {
+    height: 575px;
+    left: 42px;
+    top: 0;
+  }
+
+  .cpMain .cpFlowSp__arrow--6m img {
+    width: 575px;
+  }
+
+  .cpMain .cpFlowSp__arrow--6m em {
+    height: 38px;
+    letter-spacing: -0.03em;
+    line-height: 1.6;
+    top: 268.76px;
+  }
+
+  /* --------------------------------------------------------- 05 after */
+  .cpMain .cpAfterBox {
+    gap: 32px;
+    padding: 30px 20px;
+  }
+
+  .cpMain .cpAfterBox .cpSpec__head {
+    gap: 0;
+  }
+
+  .cpMain .cpAfterBox .cpSpec__title {
+    color: #221815;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    line-height: 1.935;
+  }
+
+  .cpMain .cpSupport {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .cpMain .cpSupport li {
+    gap: 24px;
+  }
+
+  .cpMain .cpSupport__h {
+    font-size: 16px;
+    height: 60px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    min-height: 60px;
+    padding: 10px 0;
+  }
+
+  .cpMain .cpSupport__h--narrow {
+    letter-spacing: 0.03em;
+  }
+
+  .cpMain .cpSupport__slot {
+    display: block;
+    height: 100px;
+    position: relative;
+  }
+
+  .cpMain .cpSupport__slot img {
+    left: 50%;
+    max-width: none;
+    position: absolute;
+    top: 0;
+    translate: -50% 0;
+  }
+
+  .cpMain .cpSupport li:nth-child(1) .cpSupport__slot img {
+    height: 100px;
+    width: 101px;
+  }
+  .cpMain .cpSupport li:nth-child(2) .cpSupport__slot img {
+    height: 82px;
+    top: 18.15px;
+    width: 191px;
+  }
+  .cpMain .cpSupport li:nth-child(3) .cpSupport__slot img {
+    height: 102px;
+    width: 155px;
+  }
+  .cpMain .cpSupport li:nth-child(4) .cpSupport__slot img {
+    height: 99px;
+    top: 0.5px;
+    width: 79px;
+  }
+
+  .cpMain .cpSupport .cpSpec__text {
+    color: #221815;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 2;
+  }
+}
+
+/* fine adjustments measured against Figma SP */
+@media screen and (max-width: 767px) {
+  .cpMain .cpMv__text {
+    line-height: 30px;
+  }
+
+  .cpMain .cpMv__text p + p {
+    margin-top: 30px;
+  }
+
+  .cpMain .cpResult__num, .cpMain .cpResult__num--lg {
+    line-height: 36.4px;
+  }
+
+  .cpMain .cpSolarSp__box p {
+    line-height: 2;
+  }
+
+  .cpMain .cpSolarSp__graph {
+    height: 93.06px;
+  }
+
+  .cpMain .cpDmp__spH .cpX__h4:first-child {
+    line-height: 31px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cpMain .cpSpec__sub, .cpMain .cpFlowSp__sub {
+    line-height: 22px;
+  }
+
+  .cpMain .cpDmp__spH .cpX__h4:last-child {
+    line-height: 25px;
+  }
+}
+
+/* Wider phones (376-767px): keep the 375px design, but center and scale
+   the fixed-width parts instead of leaving them left-aligned. */
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .cpMain .cpSection .cpContainer,
+  .cpMain .cpMv__inner {
+    margin: 0 auto;
+    max-width: 520px;
+  }
+
+  /* house diagram: scale with width, hotspots follow in % */
+  .cpMain .cpStdHouse,
+  .cpMain .cpStdHouse__sp {
+    aspect-ratio: 350 / 248;
+    height: auto;
+    max-width: 480px;
+    width: calc(100% + 15px);
+  }
+
+  .cpMain .cpStdHouse__sp {
+    max-width: none;
+    width: 100%;
+  }
+
+  .cpMain .cpStdHouse__sp img {
+    margin-top: -3.986%;
+    width: 100.286%;
+  }
+
+  .cpMain .cpStdHot          { height: 7.863%; }
+  .cpMain .cpStdHot.is-zeh    { left: 0;       top: 0;       width: 26%; }
+  .cpMain .cpStdHot.is-solar  { left: 74.229%; top: 0;       width: 26%; }
+  .cpMain .cpStdHot.is-window { left: 0.143%;  top: 46.774%; width: 26%; }
+  .cpMain .cpStdHot.is-damper { left: 63.857%; top: 43.145%; width: 36.2%; }
+  .cpMain .cpStdHot.is-hinoki { left: 0;       top: 92.218%; width: 32.486%; }
+  .cpMain .cpStdHot.is-aqua   { left: 45%;     top: 92.339%; width: 55.057%; }
+
+  /* figures inside boxes follow the box width */
+  .cpMain .cpSpImg,
+  .cpMain .cpSolarSp__graph {
+    height: auto;
+    width: 100%;
+  }
+
+  .cpMain .cpSpImg--wide {
+    width: calc(100% + 4px);
+  }
+
+  .cpMain .cpSpImg--uvalue {
+    margin-left: -2px;
+    width: calc(100% + 4px);
+  }
+
+  /* photos / product: grow a little, then stay centered */
+  .cpMain .cpX__photo {
+    align-self: center;
+    aspect-ratio: 285 / 380;
+    height: auto;
+    width: min(100%, 360px);
+  }
+
+  .cpMain .cpSolarSp__product {
+    align-self: center;
+    aspect-ratio: 285 / 295.27;
+    height: auto;
+    width: min(100%, 360px);
+  }
+
+  /* fixed-size diagrams: center them in the box */
+  .cpMain .cpPlanSp__list,
+  .cpMain .cpFlowSp__body {
+    margin: 0 auto;
+    width: 291px;
+  }
+}
+
+@media screen and (min-width: 376px) and (max-width: 767px) {
+  .cpMain .cpResult .cp-sp {
+    display: none;
+  }
+
+  .cpMain .cpSpImg,
+  .cpMain .cpSpImg--wide,
+  .cpMain .cpSpImg--uvalue,
+  .cpMain .cpSolarSp__graph {
+    align-self: center;
+    margin-left: 0;
+    max-width: 420px;
+  }
+}
